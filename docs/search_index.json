@@ -1,3 +1,7 @@
 [
-["index.html", "Un livre de toute beauté 1 Philippe le magnifique", " Un livre de toute beauté Nicolas Bressoud 19 mai 2020 1 Philippe le magnifique Philippe est quelqu’un de sympathique qui est tout à fait motivé à prendre un accent étranger. "]
+["index.html", "Notes personnelles : procédures et outils avec R 1 Préambule", " Notes personnelles : procédures et outils avec R Nicolas Bressoud 27 May, 2020 1 Préambule Raisons de ce livre. Moyens de garder au chaud mes apprentissages, les principes importants et procédures R relatives. Les soucis, les bonnes pratiques. Les sources aidantes. "],
+["environnement-de-travail.html", "2 Environnement de travail", " 2 Environnement de travail bla bla sur les raisons du truc. "],
+["préparation-des-données.html", "3 Préparation des données", " 3 Préparation des données bonnes pratiques et exemples et sources "],
+["description-des-données.html", "4 Description des données 4.1 Princpes 4.2 Procédures 4.3 Tableaux 4.4 Plots", " 4 Description des données 4.1 Princpes 4.2 Procédures 4.3 Tableaux 4.4 Plots "],
+["rapport.html", "5 Rapport 5.1 Principes 5.2 Procédures clés 5.3 Un mot sur les normes APA 5.4 Un mot sur Bookdown et GitHub", " 5 Rapport 5.1 Principes Avec ressources (fameux document PDF) Ce qui est attendu dans un document de type rapport. 5.2 Procédures clés 5.3 Un mot sur les normes APA 5.4 Un mot sur Bookdown et GitHub "]
 ]

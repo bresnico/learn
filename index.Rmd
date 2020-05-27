@@ -1,7 +1,7 @@
 ---
-title: "Un livre de toute beauté"
+title: "Notes personnelles : procédures et outils avec R"
 author: "Nicolas Bressoud"
-date: "19 mai 2020"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: bookdown::gitbook
 site: bookdown::bookdown_site
 ---
@@ -10,9 +10,9 @@ site: bookdown::bookdown_site
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Philippe le magnifique
+# Préambule
 
-Philippe est quelqu'un de sympathique qui est tout à fait motivé à prendre un accent étranger.
+Raisons de ce livre. Moyens de garder au chaud mes apprentissages, les principes importants et procédures R relatives. Les soucis, les bonnes pratiques. Les sources aidantes.
 <!--
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 

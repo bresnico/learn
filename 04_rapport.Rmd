@@ -1,0 +1,12 @@
+# Rapport 
+
+## Principes
+
+Avec ressources (fameux document PDF)
+Ce qui est attendu dans un document de type rapport.
+
+## Procédures clés
+
+## Un mot sur les normes APA
+
+## Un mot sur Bookdown et GitHub
