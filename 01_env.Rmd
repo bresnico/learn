@@ -1,3 +1,45 @@
 # Environnement de travail
 
-bla bla sur les raisons du truc.
+La configuration de travail implique GitHub, RStudio, Sublime Text.
+
+## GitHub et structure des dossiers locaux
+
+explication, avantages, inconvénients
+
+On dispose d'un compte chez GitHub. Le compte est lié à 3 machines (2 macbooks et un pc). Le *commit* et le *push* se réalisent depuis RStudio directement.
+
+Sur chaque machine, on dispose d'une structure de type *Documents > GitHub > r-projects* (attention à la casse).
+
+Le dossier *r-projects* contient autant de sous-dossiers que de projets à analyser. 
+
+Chaque sous-dossier a un nom structuré ainsi (attention à la casse) : *contexteannée_initialesauteurprincipal* (par exemple : *dupp2019_cr*).
+
+Dans chaque sous-dossier:
++ un fichier Rproj est disponible et il porte le nom du sous-dossier
++ un fichier présentant les données brutes (raw) est disponible (en lecture seule de préférence) et il porte un titre de la forme *nomsousdossier_raw*. Il peut être en format .csv ou .xlsx.
++ un fichier de script .R intitulé *nomsousdossier_script*
++ un fichier Rmarkdown .Rmd intitulé *nomsousdossier_rapport*
++ les sorties de type HTML, pdf, ou image (png, svg) n'obéissent pas à des règles précises.
+
+L'esprit est d'avoir à tout moment sur GitHub une vision claire des modifications réalisées à travers les différentes étapes de mise à jour des fichier (traçabilité de la démarche). De plus, une attention particulière est accordée à l'écriture d'un code lisible et commenté, que ce soit dans le script ou dans le rapport Rmarkdown.
+
+Le script et le rapport se rédigent en parallèle.
+
+## RStudio et packages
+
+On dispose en l'état de la version 4.0.0 de R ainsi que de la version XXX de RStudio.
+
+Les packages suivants sont installés:
++ `tidyverse`, suite de packages pour travailler de manière *tidy* (bien rangé) : `ggplot2`, `dplyr`, `tidyr`, `readr`, `purrr`, `tibble`, `stringr`, `forcats`.
++ `readxl`, permet de lire et importer les fichiers .xlsx.
++ `bookdown`, permet de réaliser à peu de frais le présent livre
+
+## Sublime Text et Packages.
+
+L'utilisation de Sublime Tex est ergonomique. Les packages permettent de travailler comme R Studio, avec toutefois un environnement plus aéré et propice à la rédaction. Il est complémentaire à RStudio mais et peut le remplacer pour certaines courtes étapes de rédaction.
+
+Les packages installés sont :
++ sur PC : R-Box, R-IDE, LSP
++ sur MAC : XXX
+
+GitHub sur Sublime Text ??? Emmet, git, sublime github. https://gist.github.com/KedrikG/f7b955dc371b1204ec76ce862e2dcd2e

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Environnement de travail | Notes personnelles : procédures et outils avec R</title>
-  <meta name="description" content="2 Environnement de travail | Notes personnelles : procédures et outils avec R" />
+  <title>2 Environnement de travail | Notes personnelles : Principes stats, procédures et outils avec R</title>
+  <meta name="description" content="2 Environnement de travail | Notes personnelles : Principes stats, procédures et outils avec R" />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Environnement de travail | Notes personnelles : procédures et outils avec R" />
+  <meta property="og:title" content="2 Environnement de travail | Notes personnelles : Principes stats, procédures et outils avec R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Environnement de travail | Notes personnelles : procédures et outils avec R" />
+  <meta name="twitter:title" content="2 Environnement de travail | Notes personnelles : Principes stats, procédures et outils avec R" />
   
   
   
@@ -32,7 +32,6 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="préparation-des-données.html"/>
-<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -66,17 +65,19 @@
 
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Préambule</a></li>
-<li class="chapter" data-level="2" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html"><i class="fa fa-check"></i><b>2</b> Environnement de travail</a></li>
+<li class="chapter" data-level="2" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html"><i class="fa fa-check"></i><b>2</b> Environnement de travail</a><ul>
+<li class="chapter" data-level="2.1" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#github-et-structure-des-dossiers-locaux"><i class="fa fa-check"></i><b>2.1</b> GitHub et structure des dossiers locaux</a></li>
+<li class="chapter" data-level="2.2" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#rstudio-et-packages"><i class="fa fa-check"></i><b>2.2</b> RStudio et packages</a></li>
+<li class="chapter" data-level="2.3" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#sublime-text-et-packages."><i class="fa fa-check"></i><b>2.3</b> Sublime Text et Packages.</a></li>
+</ul></li>
 <li class="chapter" data-level="3" data-path="préparation-des-données.html"><a href="préparation-des-données.html"><i class="fa fa-check"></i><b>3</b> Préparation des données</a></li>
-<li class="chapter" data-level="4" data-path="description-des-données.html"><a href="description-des-données.html"><i class="fa fa-check"></i><b>4</b> Description des données</a>
-<ul>
+<li class="chapter" data-level="4" data-path="description-des-données.html"><a href="description-des-données.html"><i class="fa fa-check"></i><b>4</b> Description des données</a><ul>
 <li class="chapter" data-level="4.1" data-path="description-des-données.html"><a href="description-des-données.html#princpes"><i class="fa fa-check"></i><b>4.1</b> Princpes</a></li>
 <li class="chapter" data-level="4.2" data-path="description-des-données.html"><a href="description-des-données.html#procédures"><i class="fa fa-check"></i><b>4.2</b> Procédures</a></li>
 <li class="chapter" data-level="4.3" data-path="description-des-données.html"><a href="description-des-données.html#tableaux"><i class="fa fa-check"></i><b>4.3</b> Tableaux</a></li>
 <li class="chapter" data-level="4.4" data-path="description-des-données.html"><a href="description-des-données.html#plots"><i class="fa fa-check"></i><b>4.4</b> Plots</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="rapport.html"><a href="rapport.html"><i class="fa fa-check"></i><b>5</b> Rapport</a>
-<ul>
+<li class="chapter" data-level="5" data-path="rapport.html"><a href="rapport.html"><i class="fa fa-check"></i><b>5</b> Rapport</a><ul>
 <li class="chapter" data-level="5.1" data-path="rapport.html"><a href="rapport.html#principes"><i class="fa fa-check"></i><b>5.1</b> Principes</a></li>
 <li class="chapter" data-level="5.2" data-path="rapport.html"><a href="rapport.html#procédures-clés"><i class="fa fa-check"></i><b>5.2</b> Procédures clés</a></li>
 <li class="chapter" data-level="5.3" data-path="rapport.html"><a href="rapport.html#un-mot-sur-les-normes-apa"><i class="fa fa-check"></i><b>5.3</b> Un mot sur les normes APA</a></li>
@@ -91,7 +92,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notes personnelles : procédures et outils avec R</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notes personnelles : Principes stats, procédures et outils avec R</a>
           </h1>
         </div>
 
@@ -99,10 +100,42 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="environnement-de-travail" class="section level1" number="2">
+<div id="environnement-de-travail" class="section level1">
 <h1><span class="header-section-number">2</span> Environnement de travail</h1>
-<p>bla bla sur les raisons du truc.</p>
+<p>La configuration de travail implique GitHub, RStudio, Sublime Text.</p>
+<div id="github-et-structure-des-dossiers-locaux" class="section level2">
+<h2><span class="header-section-number">2.1</span> GitHub et structure des dossiers locaux</h2>
+<p>explication, avantages, inconvénients</p>
+<p>On dispose d’un compte chez GitHub. Le compte est lié à 3 machines (2 macbooks et un pc). Le <em>commit</em> et le <em>push</em> se réalisent depuis RStudio directement.</p>
+<p>Sur chaque machine, on dispose d’une structure de type <em>Documents &gt; GitHub &gt; r-projects</em> (attention à la casse).</p>
+<p>Le dossier <em>r-projects</em> contient autant de sous-dossiers que de projets à analyser.</p>
+<p>Chaque sous-dossier a un nom structuré ainsi (attention à la casse) : <em>contexteannée_initialesauteurprincipal</em> (par exemple : <em>dupp2019_cr</em>).</p>
+<p>Dans chaque sous-dossier:
++ un fichier Rproj est disponible et il porte le nom du sous-dossier
++ un fichier présentant les données brutes (raw) est disponible (en lecture seule de préférence) et il porte un titre de la forme <em>nomsousdossier_raw</em>. Il peut être en format .csv ou .xlsx.
++ un fichier de script .R intitulé <em>nomsousdossier_script</em>
++ un fichier Rmarkdown .Rmd intitulé <em>nomsousdossier_rapport</em>
++ les sorties de type HTML, pdf, ou image (png, svg) n’obéissent pas à des règles précises.</p>
+<p>L’esprit est d’avoir à tout moment sur GitHub une vision claire des modifications réalisées à travers les différentes étapes de mise à jour des fichier (traçabilité de la démarche). De plus, une attention particulière est accordée à l’écriture d’un code lisible et commenté, que ce soit dans le script ou dans le rapport Rmarkdown.</p>
+<p>Le script et le rapport se rédigent en parallèle.</p>
+</div>
+<div id="rstudio-et-packages" class="section level2">
+<h2><span class="header-section-number">2.2</span> RStudio et packages</h2>
+<p>On dispose en l’état de la version 4.0.0 de R ainsi que de la version XXX de RStudio.</p>
+<p>Les packages suivants sont installés:
++ <code>tidyverse</code>, suite de packages pour travailler de manière <em>tidy</em> (bien rangé) : <code>ggplot2</code>, <code>dplyr</code>, <code>tidyr</code>, <code>readr</code>, <code>purrr</code>, <code>tibble</code>, <code>stringr</code>, <code>forcats</code>.
++ <code>readxl</code>, permet de lire et importer les fichiers .xlsx.
++ <code>bookdown</code>, permet de réaliser à peu de frais le présent livre</p>
+</div>
+<div id="sublime-text-et-packages." class="section level2">
+<h2><span class="header-section-number">2.3</span> Sublime Text et Packages.</h2>
+<p>L’utilisation de Sublime Tex est ergonomique. Les packages permettent de travailler comme R Studio, avec toutefois un environnement plus aéré et propice à la rédaction. Il est complémentaire à RStudio mais et peut le remplacer pour certaines courtes étapes de rédaction.</p>
+<p>Les packages installés sont :
++ sur PC : R-Box, R-IDE, LSP
++ sur MAC : XXX</p>
+<p>GitHub sur Sublime Text ??? Emmet, git, sublime github. <a href="https://gist.github.com/KedrikG/f7b955dc371b1204ec76ce862e2dcd2e" class="uri">https://gist.github.com/KedrikG/f7b955dc371b1204ec76ce862e2dcd2e</a></p>
 
+</div>
 </div>
             </section>
 
@@ -149,7 +182,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": null,
+"link": "https://github.com/bresnico/learn/blob/master/01_env.Rmd",
 "text": null
 },
 "download": null,
