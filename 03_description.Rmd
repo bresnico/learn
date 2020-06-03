@@ -7,3 +7,22 @@
 ## Tableaux
 
 ## Plots
+
+Travail avec Zoe. Notes à intégrer : 
+
+Réaliser des boxplots avec barres d'erreurs
+
+[ ] --> plutôt utiliser select des variables ou filter des participants
+gather --> 1er argument nom et 2ème argument valeur
+
+set.sid dans Rmarkdown pour figer les aléatoires, p.ex. le jitter pour pas que ça change à chaque lancement.
+
+installer des kits de couleurs au besoin.
+
+shape : les numéros correspondent à des formes de points.
+
+geom_line : 3 arguments minimum. avec group.
+--> pourquoi "group" et pourquoi "1".
+Alt + N = ~
+
+jitter --> position et positionjitterdodge pour comparer G et F
