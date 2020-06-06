@@ -72,7 +72,10 @@
 <li class="chapter" data-level="2.2" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#rstudio-et-packages"><i class="fa fa-check"></i><b>2.2</b> RStudio et packages</a></li>
 <li class="chapter" data-level="2.3" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#sublime-text-et-packages."><i class="fa fa-check"></i><b>2.3</b> Sublime Text et Packages.</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="préparation-des-données.html"><a href="préparation-des-données.html"><i class="fa fa-check"></i><b>3</b> Préparation des données</a></li>
+<li class="chapter" data-level="3" data-path="préparation-des-données.html"><a href="préparation-des-données.html"><i class="fa fa-check"></i><b>3</b> Préparation des données</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="préparation-des-données.html"><a href="préparation-des-données.html#bonnes-pratiques-dans-le-système-de-récolte-des-données-qualtrics"><i class="fa fa-check"></i><b>3.1</b> Bonnes pratiques dans le système de récolte des données (Qualtrics, …)</a></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="description-des-données.html"><a href="description-des-données.html"><i class="fa fa-check"></i><b>4</b> Description des données</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="description-des-données.html"><a href="description-des-données.html#princpes"><i class="fa fa-check"></i><b>4.1</b> Princpes</a></li>
@@ -107,7 +110,19 @@
 <div id="préparation-des-données" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Préparation des données</h1>
 <p>bonnes pratiques et exemples et sources</p>
+<div id="bonnes-pratiques-dans-le-système-de-récolte-des-données-qualtrics" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Bonnes pratiques dans le système de récolte des données (Qualtrics, …)</h2>
+<p>Chaque questionnaire est identifié par 3 premières lettre significatives, le nombre d’items et un <code>_</code>:</p>
+<p><strong>exemple : Questionnaire sur la motivation scolaire en 13 items devient mot13_.</strong></p>
+<p>Ensuite, chacun des items est proprement nommé par ordre d’apparition :</p>
+<p><strong>exemple : mot13_1, mot13_2, …, mot13_13</strong></p>
+<p>Les items à inverser (reverse) sont traités en créant une nouvelle variable :</p>
+<p><strong>exemple : mot13_4 génère mot13_4rev</strong></p>
+<p>Les variable rev remplacent celles d’origine dans le nouveau df généré. Cela facilite l’analyse de la cohérence interne ou le calcul des scores par la suite.</p>
+<p>La variable qui contient le score porte l’extension sco :</p>
+<p><strong>exemple : mot13_sco est la variable de score total de mot13_1 : mot13_13 sans les variables qui devaient être inversées et en ajoutant les variables rev.</strong></p>
 
+</div>
 </div>
             </section>
 
