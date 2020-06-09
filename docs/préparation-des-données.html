@@ -142,15 +142,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2" data-path="préparation-des-données.html"><a href="préparation-des-données.html#premières-étapes-dans-r-en-principe-les-noms-des-variables-sont-sains"><i class="fa fa-check"></i><b>3.2</b> Premières étapes dans R (en principe, les noms des variables sont sains)</a>
 <ul>
 <li class="chapter" data-level="3.2.1" data-path="préparation-des-données.html"><a href="préparation-des-données.html#ajout-de-la-variable-de-temps-dans-chaque-df"><i class="fa fa-check"></i><b>3.2.1</b> ajout de la variable de temps dans chaque df</a></li>
+<li class="chapter" data-level="3.2.2" data-path="préparation-des-données.html"><a href="préparation-des-données.html#création-dun-data-frame-unique"><i class="fa fa-check"></i><b>3.2.2</b> création d’un data frame unique</a></li>
+<li class="chapter" data-level="3.2.3" data-path="préparation-des-données.html"><a href="préparation-des-données.html#gestion-des-items-à-inverser"><i class="fa fa-check"></i><b>3.2.3</b> gestion des items à inverser</a></li>
+<li class="chapter" data-level="3.2.4" data-path="préparation-des-données.html"><a href="préparation-des-données.html#calcul-du-score-de-chaque-questionnaire-par-observation"><i class="fa fa-check"></i><b>3.2.4</b> calcul du score de chaque questionnaire par observation</a></li>
+<li class="chapter" data-level="3.2.5" data-path="préparation-des-données.html"><a href="préparation-des-données.html#filtrage-des-observations"><i class="fa fa-check"></i><b>3.2.5</b> Filtrage des observations</a></li>
+<li class="chapter" data-level="3.2.6" data-path="préparation-des-données.html"><a href="préparation-des-données.html#gestion-des-données-manquantes"><i class="fa fa-check"></i><b>3.2.6</b> Gestion des données manquantes</a></li>
+<li class="chapter" data-level="3.2.7" data-path="préparation-des-données.html"><a href="préparation-des-données.html#gestion-des-données-extrêmes"><i class="fa fa-check"></i><b>3.2.7</b> Gestion des données extrêmes</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="description-des-données.html"><a href="description-des-données.html"><i class="fa fa-check"></i><b>4</b> Description des données</a>
 <ul>
-<li class="chapter" data-level="4.0.1" data-path="description-des-données.html"><a href="description-des-données.html#obtenir-une-synthèse-de-données"><i class="fa fa-check"></i><b>4.0.1</b> Obtenir une synthèse de données</a></li>
-<li class="chapter" data-level="4.1" data-path="description-des-données.html"><a href="description-des-données.html#princpes"><i class="fa fa-check"></i><b>4.1</b> Princpes</a></li>
-<li class="chapter" data-level="4.2" data-path="description-des-données.html"><a href="description-des-données.html#procédures"><i class="fa fa-check"></i><b>4.2</b> Procédures</a></li>
-<li class="chapter" data-level="4.3" data-path="description-des-données.html"><a href="description-des-données.html#tableaux"><i class="fa fa-check"></i><b>4.3</b> Tableaux</a></li>
-<li class="chapter" data-level="4.4" data-path="description-des-données.html"><a href="description-des-données.html#plots"><i class="fa fa-check"></i><b>4.4</b> Plots</a></li>
+<li class="chapter" data-level="4.1" data-path="description-des-données.html"><a href="description-des-données.html#obtenir-une-synthèse-de-données"><i class="fa fa-check"></i><b>4.1</b> Obtenir une synthèse de données</a></li>
+<li class="chapter" data-level="4.2" data-path="description-des-données.html"><a href="description-des-données.html#princpes"><i class="fa fa-check"></i><b>4.2</b> Princpes</a></li>
+<li class="chapter" data-level="4.3" data-path="description-des-données.html"><a href="description-des-données.html#procédures"><i class="fa fa-check"></i><b>4.3</b> Procédures</a></li>
+<li class="chapter" data-level="4.4" data-path="description-des-données.html"><a href="description-des-données.html#tableaux"><i class="fa fa-check"></i><b>4.4</b> Tableaux</a></li>
+<li class="chapter" data-level="4.5" data-path="description-des-données.html"><a href="description-des-données.html#plots"><i class="fa fa-check"></i><b>4.5</b> Plots</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="rapport.html"><a href="rapport.html"><i class="fa fa-check"></i><b>5</b> Rapport</a>
 <ul>
@@ -222,10 +228,112 @@ On relève toutefois une faiblesse : le code n’est pas 100% anonyme et on peut
 <span id="cb4-7"><a href="préparation-des-données.html#cb4-7"></a>d_t2 &lt;-<span class="st"> </span>d_t2_raw <span class="op">%&gt;%</span><span class="st"> </span></span>
 <span id="cb4-8"><a href="préparation-des-données.html#cb4-8"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">temps=</span><span class="st">&quot;temps 2&quot;</span>,</span>
 <span id="cb4-9"><a href="préparation-des-données.html#cb4-9"></a>         <span class="dt">id=</span><span class="kw">tolower</span>(id))</span></code></pre></div>
+</div>
+<div id="création-dun-data-frame-unique" class="section level3" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> création d’un data frame unique</h3>
+<p>A ce stade, il ne semble pas y avoir de raison au maintien de 2 df différents. On peut créer un df unique à l’aide, simplement, de <code>bind_rows</code>. Cela nous évite de doubler les manipulations au temps 1 et au temps 2.</p>
+<p>Au préalable, on s’est assuré que les noms des variables correspondaient à notre nomenclature, et que l’ordre des questions dans chaque questionnaire était le même au <em>temps 1</em> et au <em>temps 2</em>.</p>
+<p>Les éventuelles nouvelles variables du temps 2 sont bien traitées grâce à l’ajout de <code>NA</code> pour les observations du temps 1.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="préparation-des-données.html#cb5-1"></a><span class="co">#Mise en formation long sur un df</span></span>
+<span id="cb5-2"><a href="préparation-des-données.html#cb5-2"></a></span>
+<span id="cb5-3"><a href="préparation-des-données.html#cb5-3"></a>d_long &lt;-<span class="st"> </span><span class="kw">bind_rows</span>(d_t1,d_t2)</span></code></pre></div>
+<blockquote>
+<p>On choisit la mise en format <em>long</em> (au lieu de <em>wide</em>) pour correspondre au attentes du traitement <em>tidy</em> des données. Cela signifie que chaque ligne est une observation et chaque colonne est une variable. Ceci implique que chaque participant·e se retrouve dans deux lignes : une concernant la modalité (facteur) <strong>temps 1</strong> et l’autre selon la modalité <strong>temps 2</strong>. C’était déroutant au début mais on a adopté cette manière de faire.</p>
+</blockquote>
+</div>
+<div id="gestion-des-items-à-inverser" class="section level3" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> gestion des items à inverser</h3>
 <p>Les items à inverser sont traités en étant strictement remplacés via la fonction <code>mutate()</code> dans le cadre de l’enregistrement d’un nouveau <code>data frame</code>. R permet de remonter les changements donc cet écrasement n’empêche pas la vérification des processus, étape par étape.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="préparation-des-données.html#cb6-1"></a><span class="co">#Recondage des variables au score inversé</span></span>
+<span id="cb6-2"><a href="préparation-des-données.html#cb6-2"></a></span>
+<span id="cb6-3"><a href="préparation-des-données.html#cb6-3"></a>d_long &lt;-<span class="st"> </span>d_long <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb6-4"><a href="préparation-des-données.html#cb6-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">hbs20__7 =</span> <span class="dv">6</span> <span class="op">-</span><span class="st"> </span>hbs20__<span class="dv">7</span>,</span>
+<span id="cb6-5"><a href="préparation-des-données.html#cb6-5"></a>         <span class="dt">pec5__5 =</span> <span class="dv">6</span> <span class="op">-</span><span class="st"> </span>pec5__<span class="dv">5</span>,</span>
+<span id="cb6-6"><a href="préparation-des-données.html#cb6-6"></a>         <span class="dt">be8__4 =</span> <span class="dv">8</span> <span class="op">-</span><span class="st"> </span>be8__<span class="dv">4</span>,</span>
+<span id="cb6-7"><a href="préparation-des-données.html#cb6-7"></a>         <span class="dt">be8__5 =</span> <span class="dv">8</span> <span class="op">-</span><span class="st"> </span>be8__<span class="dv">5</span>,</span>
+<span id="cb6-8"><a href="préparation-des-données.html#cb6-8"></a>         <span class="dt">be8__8 =</span> <span class="dv">8</span> <span class="op">-</span><span class="st"> </span>be8__<span class="dv">8</span>,</span>
+<span id="cb6-9"><a href="préparation-des-données.html#cb6-9"></a>         <span class="dt">est10__3 =</span> <span class="dv">5</span> <span class="op">-</span><span class="st"> </span>est10__<span class="dv">3</span>,</span>
+<span id="cb6-10"><a href="préparation-des-données.html#cb6-10"></a>         <span class="dt">est10__5 =</span> <span class="dv">5</span> <span class="op">-</span><span class="st"> </span>est10__<span class="dv">5</span>,</span>
+<span id="cb6-11"><a href="préparation-des-données.html#cb6-11"></a>         <span class="dt">est10__7 =</span> <span class="dv">5</span> <span class="op">-</span><span class="st"> </span>est10__<span class="dv">7</span>,</span>
+<span id="cb6-12"><a href="préparation-des-données.html#cb6-12"></a>         <span class="dt">est10__10 =</span> <span class="dv">5</span> <span class="op">-</span><span class="st"> </span>est10__<span class="dv">10</span>,</span>
+<span id="cb6-13"><a href="préparation-des-données.html#cb6-13"></a>         <span class="dt">sou13__6 =</span> <span class="dv">6</span> <span class="op">-</span><span class="st"> </span>sou13__<span class="dv">6</span>,</span>
+<span id="cb6-14"><a href="préparation-des-données.html#cb6-14"></a>         <span class="dt">sou13__9 =</span> <span class="dv">6</span> <span class="op">-</span><span class="st"> </span>sou13__<span class="dv">9</span>,</span>
+<span id="cb6-15"><a href="préparation-des-données.html#cb6-15"></a>         <span class="dt">mot16__4 =</span> <span class="dv">8</span> <span class="op">-</span><span class="st"> </span>mot16__<span class="dv">4</span>,</span>
+<span id="cb6-16"><a href="préparation-des-données.html#cb6-16"></a>         <span class="dt">mot16__8 =</span> <span class="dv">8</span> <span class="op">-</span><span class="st"> </span>mot16__<span class="dv">8</span>,</span>
+<span id="cb6-17"><a href="préparation-des-données.html#cb6-17"></a>         <span class="dt">mot16__12 =</span> <span class="dv">8</span> <span class="op">-</span><span class="st"> </span>mot16__<span class="dv">12</span>,</span>
+<span id="cb6-18"><a href="préparation-des-données.html#cb6-18"></a>         <span class="dt">mot16__15 =</span> <span class="dv">8</span> <span class="op">-</span><span class="st"> </span>mot16__<span class="dv">15</span>,</span>
+<span id="cb6-19"><a href="préparation-des-données.html#cb6-19"></a>         <span class="dt">mot16__16 =</span> <span class="dv">8</span> <span class="op">-</span><span class="st"> </span>mot16__<span class="dv">16</span>)</span></code></pre></div>
+<blockquote>
+<p><em>Le code paraît fastidieux et potentiellement source d’erreurs. De plus, ce recodage s’accompagne d’une feuille annexe sur laquelle on a noté avec prudence les items en cause et la formule pour inverser les scores… On ne sait mieux faire.</em></p>
+</blockquote>
 <p>Ce procédé d’écrasement facilite l’analyse de la cohérence interne ou le calcul des scores par la suite (cf. chapitre <em>description</em>).</p>
+</div>
+<div id="calcul-du-score-de-chaque-questionnaire-par-observation" class="section level3" number="3.2.4">
+<h3><span class="header-section-number">3.2.4</span> calcul du score de chaque questionnaire par observation</h3>
 <p>La variable qui contient le score global de chaque questionnaire par participant·e porte l’extension sco :</p>
 <p><strong>exemple : <code>mot13_sco</code> est la variable de score total de <code>mot13_1</code> à <code>mot13_13</code> avec les variables qui ont été inversées.</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="préparation-des-données.html#cb7-1"></a><span class="co">#Recondage des variables au score inversé</span></span>
+<span id="cb7-2"><a href="préparation-des-données.html#cb7-2"></a></span>
+<span id="cb7-3"><a href="préparation-des-données.html#cb7-3"></a><span class="co">#Création des moyennes de chaque questionnaire pour chaque observation</span></span>
+<span id="cb7-4"><a href="préparation-des-données.html#cb7-4"></a></span>
+<span id="cb7-5"><a href="préparation-des-données.html#cb7-5"></a>d_long &lt;-<span class="st"> </span>d_long <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-6"><a href="préparation-des-données.html#cb7-6"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">hbs_sco =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;hbs&quot;</span>)),<span class="dt">na.rm =</span>T),</span>
+<span id="cb7-7"><a href="préparation-des-données.html#cb7-7"></a>         <span class="dt">pec_sco =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;pec&quot;</span>)),<span class="dt">na.rm =</span>T),</span>
+<span id="cb7-8"><a href="préparation-des-données.html#cb7-8"></a>         <span class="dt">be_sco  =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;be&quot;</span>)) ,<span class="dt">na.rm =</span>T),</span>
+<span id="cb7-9"><a href="préparation-des-données.html#cb7-9"></a>         <span class="dt">est_sco =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;est&quot;</span>)),<span class="dt">na.rm =</span>T),</span>
+<span id="cb7-10"><a href="préparation-des-données.html#cb7-10"></a>         <span class="dt">cli_sco =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;cli&quot;</span>)),<span class="dt">na.rm =</span>T),</span>
+<span id="cb7-11"><a href="préparation-des-données.html#cb7-11"></a>         <span class="dt">sou_sco =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;sou&quot;</span>)),<span class="dt">na.rm =</span>T),</span>
+<span id="cb7-12"><a href="préparation-des-données.html#cb7-12"></a>         <span class="dt">mot_sco =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;hbs&quot;</span>)),<span class="dt">na.rm =</span>T))</span></code></pre></div>
+<blockquote>
+<p>De nouveau, on ne crée pas d’objet intermédiaire sachant que R sait très bien nous permettre de vérifier le processus, étape par étape.</p>
+</blockquote>
+<p>Ce code paraît très efficace. Il se base sur notre nomenclature sans risque d’erreur, indépendamment du nombre de variable ou de la position des colonnes. On apprécie (même si on ne comprend pas encore la fonction ´select´et son fonctionnement).</p>
+</div>
+<div id="filtrage-des-observations" class="section level3" number="3.2.5">
+<h3><span class="header-section-number">3.2.5</span> Filtrage des observations</h3>
+<p>Ici, on a essayé de développer une technique pour ne garder que les <em>id</em> qui se retrouvent strictement au temps 1 et au temps 2.</p>
+<p>Les enjeux sont cruciaux :</p>
+<ul>
+<li>on doit s’assurer qu’un même <em>id</em> ne se retrouve pas plusieurs fois dans le même temps (un·e participant·e peut avoir remplis 2 fois le questionnaire du temps, p.ex.).</li>
+<li>On doit aussi s’assurer que nous ferons nos comparaisons temps 1 / temps 2 sur des données complètes.
+C’est notre présomption de base. Il est dès lors important de filtrer les observations.</li>
+</ul>
+<p>Pour cela, nous avons :</p>
+<ul>
+<li>créé un df de comparaison pour pouvoir dire à R quoi sélectionner. Ce df va, en deux étapes, ne garder que (1) les <em>id</em> uniques dans chaque temps puis (2) constituant une paire (t1, t2).</li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="préparation-des-données.html#cb8-1"></a>d_comp &lt;-<span class="st"> </span>d_long <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb8-2"><a href="préparation-des-données.html#cb8-2"></a><span class="st">  </span><span class="kw">drop_na</span>(id) <span class="op">%&gt;%</span><span class="st"> </span><span class="co">#par sécurité, on supprime les lignes dont l&#39;id est vide</span></span>
+<span id="cb8-3"><a href="préparation-des-données.html#cb8-3"></a><span class="st">  </span><span class="kw">arrange</span>(id) <span class="op">%&gt;%</span><span class="st"> </span><span class="co">#visuel uniquement</span></span>
+<span id="cb8-4"><a href="préparation-des-données.html#cb8-4"></a><span class="st">  </span><span class="kw">group_by</span>(id, temps) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb8-5"><a href="préparation-des-données.html#cb8-5"></a><span class="st">  </span><span class="kw">count</span>(id) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb8-6"><a href="préparation-des-données.html#cb8-6"></a><span class="st">  </span><span class="kw">filter</span>(n<span class="op">==</span><span class="dv">1</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co">#On s&#39;est assuré que chaque id est unique dans chaque modalité de temps. On doit encore être sûrs qu&#39;on a maintenant exactement une paire (t1,t2). Donc on continue le processus que R réalise dans cet ordre.</span></span>
+<span id="cb8-7"><a href="préparation-des-données.html#cb8-7"></a><span class="st">  </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb8-8"><a href="préparation-des-données.html#cb8-8"></a><span class="st">  </span><span class="kw">group_by</span>(id) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb8-9"><a href="préparation-des-données.html#cb8-9"></a><span class="st">  </span><span class="kw">count</span>(id) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb8-10"><a href="préparation-des-données.html#cb8-10"></a><span class="st">  </span><span class="kw">filter</span>(n<span class="op">==</span><span class="dv">2</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co">#on ne garde que les paires de id qui se retrouvent dans t1 et t2. C&#39;est notre grosse perte de données de ce traitement</span></span>
+<span id="cb8-11"><a href="préparation-des-données.html#cb8-11"></a><span class="st">  </span><span class="kw">ungroup</span>()</span></code></pre></div>
+<blockquote>
+<p><em>On devrait vérifier la validité de cette méthode, sur le plan des bonnes pratiques stat, et aussi sur le plan du codage dans R…et aussi s’assurer qu’elle fonctionne bien comme on le pense en la mettant à l’épreuve.</em></p>
+</blockquote>
+<ul>
+<li>créé un nouveau df qui ne contient plus que les paires souhaitées</li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="préparation-des-données.html#cb9-1"></a><span class="co">#Notre df de comparaison est prêt. On peut procéder à l&#39;élagage de d_long.</span></span>
+<span id="cb9-2"><a href="préparation-des-données.html#cb9-2"></a></span>
+<span id="cb9-3"><a href="préparation-des-données.html#cb9-3"></a>d_long_paired &lt;-<span class="st"> </span>d_long <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb9-4"><a href="préparation-des-données.html#cb9-4"></a><span class="st">  </span><span class="kw">filter</span>(id <span class="op">%in%</span><span class="st"> </span>d_comp<span class="op">$</span>id) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb9-5"><a href="préparation-des-données.html#cb9-5"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">group=</span><span class="kw">ifelse</span>(group<span class="op">==</span><span class="st">&quot;con&quot;</span>, <span class="st">&quot;contrôle&quot;</span>,<span class="st">&quot;expérimental&quot;</span>))</span></code></pre></div>
+<blockquote>
+<p>On a été un peu sauvé avec le logique <code>%in%</code> mais sans bien savoir pourquoi <code>==</code> ne convient pas.
+Dans l’example, on en a profité pour modifier les facteurs de la variable <code>group</code>. Les forum ne sont pas clair sur la différence entre <code>ifelse</code>et <code>if_else</code>ou encore <code>case_when</code>. On doit clarifier cela.</p>
+</blockquote>
+</div>
+<div id="gestion-des-données-manquantes" class="section level3" number="3.2.6">
+<h3><span class="header-section-number">3.2.6</span> Gestion des données manquantes</h3>
+</div>
+<div id="gestion-des-données-extrêmes" class="section level3" number="3.2.7">
+<h3><span class="header-section-number">3.2.7</span> Gestion des données extrêmes</h3>
 
 </div>
 </div>

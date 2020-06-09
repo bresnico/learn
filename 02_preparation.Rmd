@@ -56,14 +56,114 @@ d_t2 <- d_t2_raw %>%
          id=tolower(id))
 ```
 
+### création d'un data frame unique
 
+A ce stade, il ne semble pas y avoir de raison au maintien de 2 df différents. On peut créer un df unique à l'aide, simplement, de `bind_rows`. Cela nous évite de doubler les manipulations au temps 1 et au temps 2.
 
+Au préalable, on s'est assuré que les noms des variables correspondaient à notre nomenclature, et que l'ordre des questions dans chaque questionnaire était le même au *temps 1* et au *temps 2*.
+
+Les éventuelles nouvelles variables du temps 2 sont bien traitées grâce à l'ajout de `NA` pour les observations du temps 1.
+
+```{r exemple5, echo=TRUE, eval=FALSE}
+#Mise en formation long sur un df
+
+d_long <- bind_rows(d_t1,d_t2)
+```
+>On choisit la mise en format *long* (au lieu de *wide*) pour correspondre au attentes du traitement *tidy* des données. Cela signifie que chaque ligne est une observation et chaque colonne est une variable. Ceci implique que chaque participant·e se retrouve dans deux lignes : une concernant la modalité (facteur) **temps 1** et l'autre selon la modalité **temps 2**. C'était déroutant au début mais on a adopté cette manière de faire.
+
+### gestion des items à inverser
 Les items à inverser sont traités en étant strictement remplacés via la fonction `mutate()` dans le cadre de l'enregistrement d'un nouveau `data frame`. R permet de remonter les changements donc cet écrasement n'empêche pas la vérification des processus, étape par étape.
 
+```{r exemple6, echo=TRUE, eval=FALSE}
+#Recondage des variables au score inversé
+
+d_long <- d_long %>% 
+  mutate(hbs20__7 = 6 - hbs20__7,
+         pec5__5 = 6 - pec5__5,
+         be8__4 = 8 - be8__4,
+         be8__5 = 8 - be8__5,
+         be8__8 = 8 - be8__8,
+         est10__3 = 5 - est10__3,
+         est10__5 = 5 - est10__5,
+         est10__7 = 5 - est10__7,
+         est10__10 = 5 - est10__10,
+         sou13__6 = 6 - sou13__6,
+         sou13__9 = 6 - sou13__9,
+         mot16__4 = 8 - mot16__4,
+         mot16__8 = 8 - mot16__8,
+         mot16__12 = 8 - mot16__12,
+         mot16__15 = 8 - mot16__15,
+         mot16__16 = 8 - mot16__16)
+```
+>*Le code paraît fastidieux et potentiellement source d'erreurs. De plus, ce recodage s'accompagne d'une feuille annexe sur laquelle on a noté avec prudence les items en cause et la formule pour inverser les scores... On ne sait mieux faire.*
+
 Ce procédé d'écrasement facilite l'analyse de la cohérence interne ou le calcul des scores par la suite (cf. chapitre *description*).
+
+### calcul du score de chaque questionnaire par observation
 
 La variable qui contient le score global de chaque questionnaire par participant·e porte l'extension sco :
 
 **exemple : `mot13_sco` est la variable de score total de `mot13_1` à `mot13_13` avec les variables qui ont été inversées.**
 
+```{r exemple7, echo=TRUE, eval=FALSE}
+#Recondage des variables au score inversé
 
+#Création des moyennes de chaque questionnaire pour chaque observation
+
+d_long <- d_long %>% 
+  mutate(hbs_sco = rowMeans(select(.,starts_with("hbs")),na.rm =T),
+         pec_sco = rowMeans(select(.,starts_with("pec")),na.rm =T),
+         be_sco  = rowMeans(select(.,starts_with("be")) ,na.rm =T),
+         est_sco = rowMeans(select(.,starts_with("est")),na.rm =T),
+         cli_sco = rowMeans(select(.,starts_with("cli")),na.rm =T),
+         sou_sco = rowMeans(select(.,starts_with("sou")),na.rm =T),
+         mot_sco = rowMeans(select(.,starts_with("hbs")),na.rm =T))
+
+```
+> De nouveau, on ne crée pas d'objet intermédiaire sachant que R sait très bien nous permettre de vérifier le processus, étape par étape.
+
+Ce code paraît très efficace. Il se base sur notre nomenclature sans risque d'erreur, indépendamment du nombre de variable ou de la position des colonnes. On apprécie (même si on ne comprend pas encore la fonction ´select´et son fonctionnement).
+
+### Filtrage des observations 
+
+Ici, on a essayé de développer une technique pour ne garder que les *id* qui se retrouvent strictement au temps 1 et au temps 2.
+
+Les enjeux sont cruciaux :
+
++ on doit s'assurer qu'un même *id* ne se retrouve pas plusieurs fois dans le même temps (un·e participant·e peut avoir remplis 2 fois le questionnaire du temps, p.ex.).
++ On doit aussi s'assurer que nous ferons nos comparaisons temps 1 / temps 2 sur des données complètes.
+C'est notre présomption de base. Il est dès lors important de filtrer les observations.
+
+Pour cela, nous avons :
+
++ créé un df de comparaison pour pouvoir dire à R quoi sélectionner. Ce df va, en deux étapes, ne garder que (1) les *id* uniques dans chaque temps puis (2) constituant une paire (t1, t2).
+```{r exemple8, echo=TRUE, eval=FALSE}
+d_comp <- d_long %>% 
+  drop_na(id) %>% #par sécurité, on supprime les lignes dont l'id est vide
+  arrange(id) %>% #visuel uniquement
+  group_by(id, temps) %>% 
+  count(id) %>% 
+  filter(n==1) %>% #On s'est assuré que chaque id est unique dans chaque modalité de temps. On doit encore être sûrs qu'on a maintenant exactement une paire (t1,t2). Donc on continue le processus que R réalise dans cet ordre.
+  ungroup() %>% 
+  group_by(id) %>% 
+  count(id) %>% 
+  filter(n==2) %>% #on ne garde que les paires de id qui se retrouvent dans t1 et t2. C'est notre grosse perte de données de ce traitement
+  ungroup()
+```
+> *On devrait vérifier la validité de cette méthode, sur le plan des bonnes pratiques stat, et aussi sur le plan du codage dans R...et aussi s'assurer qu'elle fonctionne bien comme on le pense en la mettant à l'épreuve.*
+
++ créé un nouveau df qui ne contient plus que les paires souhaitées
+```{r exemple9, echo=TRUE, eval=FALSE}
+#Notre df de comparaison est prêt. On peut procéder à l'élagage de d_long.
+
+d_long_paired <- d_long %>% 
+  filter(id %in% d_comp$id) %>% 
+  mutate(group=ifelse(group=="con", "contrôle","expérimental"))
+```
+
+>On a été un peu sauvé avec le logique `%in%` mais sans bien savoir pourquoi `==` ne convient pas.
+>Dans l'example, on en a profité pour modifier les facteurs de la variable `group`. Les forum ne sont pas clair sur la différence entre `ifelse`et `if_else`ou encore `case_when`. On doit clarifier cela.
+
+### Gestion des données manquantes
+
+### Gestion des données extrêmes 

@@ -1,14 +1,28 @@
 # Description des données
 
-### Obtenir une synthèse de données
+## Obtenir une synthèse de données
 
-```{r exemplex, echo=TRUE, eval=FALSE}
-#Quelques données sur l'état des participants au Temps 1 et au Temps 2 avant suppression des ID non-membres d'une paire entre T1 et T2.
-d_t1_sum <- d_t1 %>% 
-  group_by(group,sex) %>% 
+Voici deux exemples pour obtenir des petits résumés.
+```{r exemple10, echo=TRUE, eval=FALSE}
+d_long_paired_sum <- d_long_paired %>% 
+   mutate(sex=ifelse(sex=="1", "garçons","filles")) %>% 
+   group_by(temps, group, sex) %>% 
+  summarise(n=n())
+
+d_long_paired_sum2 <- d_long_paired %>% 
+  group_by(temps, group) %>% 
   summarise(n=n(),
-            age_moy=round(mean(age),
-                          digits=1)) 
+            mean_hbs=mean(hbs_sco),
+            mean_pec=mean(pec_sco),
+            mean_be=mean(be_sco),
+            mean_est=mean(est_sco),
+            mean_cli=mean(cli_sco),
+            mean_sou=mean(sou_sco),
+            mean_mot=mean(mot_sco),
+            mean_sho1=mean(sho_1),
+            mean_sho2=mean(sho_2),
+            mean_sho3=mean(sho_3),
+            mean_sho4=mean(sho_4))
 ```
 
 ## Princpes
