@@ -15,4 +15,4 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Ce livre a comme objectifs de garder traces des apprentissages réalisés simultanément en stats ainsi qu'en utilisation de R pour les analyses et le rapport des résultats. Il sert donc avant tout de mémoire à l'auteur.
 
-On insistera particulièrement sur les bonnes pratiques, les sources pertinentes, et quelques traces de scripts.
+On insistera particulièrement sur les bonnes pratiques, les sources pertinentes, et quelques traces de scripts. On présentera également les doutes, les chantiers ouverts et quelques interrogations, soit autant d'éléments qui permettront de jalonner les prochaines étapes d'apprentissage.

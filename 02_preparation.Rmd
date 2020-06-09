@@ -1,21 +1,69 @@
 # Préparation des données
 
-bonnes pratiques et exemples et sources
+Au sein de ce chapitre, on cherche à atteindre le double objectif de/d' :
+
++ expliciter une manière que l'on espère *élégante* et *efficace* **(minimum d'effort pour le maximum d'efficacité)** de préparer les données.
++ se conformer aux apprentissages et pratiques en traitement des données (et progresser).
+
+On cherche dans la mesure du possible à toujours travailler avec des *tidy datas* et à utiliser en priorité les fonctions de la série de packages de `tidyverse`.
 
 ## Bonnes pratiques dans le système de récolte des données (Qualtrics, ...)
 
+Chaque participant·e reçoit un *id* partiellement anonymisé. Il est fourni par le chercheur (et n'est pas construit par le ou la participant·e). L'*id* ne contient que des chiffres pour simplifier le problème des majuscules/minuscules à la saisie et éviter les confusions entre le *zéro* et la lettre *o* (oui oui, c'est du vécu). Ceci signifie que l'*id* dispose d'une structure qui permet de/d' :
+
++ évaluer son authenticité
++ faciliter la catégorisation des données
++ repérer efficacement les *id* et leur catégorisation dans les traitement ultérieurs.
+
+**exemple : un *id* comme *12.47.694* est structuré comme suit *classe12.constantearbitraire47.nombrealéatoireà3chiffres*.**  
+
+Chaque *id* est **vérifié** dans Qualtrics, ce qui signifie qu'un·e participant·e doit confirmer l'*id* pour que le système passe à la suite. On relève aussi l'intérêt de demander à l'utilisateur·trice de **confirmer son groupe d'appartenance** en cochant un facteur dans une **liste imposée** dans Qualtrics. Ceci a l'avantage de repérer les saisies fantasques (une personne met un *id* bidon / un·e participant·e s'inscrit avec le bon *id* mais dans le mauvais groupe, ...).
+Dans la préparation des données, il semble que l'on gagne ainsi un temps important pour trier les données valables et que la confiance dans les données s'en trouve augmentée. 
+On relève toutefois une faiblesse : le code n'est pas 100% anonyme et on peut toujours remonter à un groupe de participant·es. Il faut alors en amont s'engager à détruire le document qui a permis la génération des *id*.
+
 Chaque questionnaire est identifié par 3 premières lettre significatives, le nombre d'items et un `_`:
 
-**exemple : Questionnaire sur la motivation scolaire en 13 items devient mot13_.**
+**exemple : Questionnaire sur la motivation scolaire en 13 items devient `mot13`.**
 
 Ensuite, chacun des items est proprement nommé par ordre d'apparition :
 
-**exemple : mot13_1, mot13_2, ..., mot13_13**
+**exemple : `mot13_1`, `mot13_2`, ..., `mot13_13` (il semble que Qualtrics ajoute par défaut le *underscore_* )**
 
-Les items à inverser sont traités en étant strictement remplacés `mutate()` dans le cadre de l'enregistrement d'un nouveau df.
+## Premières étapes dans R (en principe, les noms des variables sont sains)
 
-Cela facilite l'analyse de la cohérence interne ou le calcul des scores par la suite.
+On commence par le chargement des packages et l'importation du ou des fichiers de données. Dans cet exemple, on prend le cas (plus complexe) où nous devons gérer et associer deux `data frames`.
 
-La variable qui contient le score porte l'extension sco :
+```{r exemple3, echo=TRUE, eval=FALSE}
+library(tidyverse)
+library(readxl)
 
-**exemple : mot13_sco est la variable de score total de mot13_1 : mot13_13 sans les variables qui devaient être inversées et en ajoutant les variables rev.**
+# Importation des données Qualtrics à disposition ----
+d_t1_raw <- read_excel("crips2019_lv_raw_t1.xlsx")
+d_t2_raw <- read_excel("crips2019_lv_raw_t2.xlsx")
+```
+
+### ajout de la variable de temps dans chaque df
+Dans cet exemple, on règle en même temps le problème des *id* qui contiennent des majuscules.
+```{r exemple4, echo=TRUE, eval=FALSE}
+#Ajout de la variable temps sur chaque df et normalisation des id en minuscule.
+
+d_t1 <- d_t1_raw %>% 
+  mutate(temps="temps 1",
+         id=tolower(id)) 
+
+d_t2 <- d_t2_raw %>% 
+  mutate(temps="temps 2",
+         id=tolower(id))
+```
+
+
+
+Les items à inverser sont traités en étant strictement remplacés via la fonction `mutate()` dans le cadre de l'enregistrement d'un nouveau `data frame`. R permet de remonter les changements donc cet écrasement n'empêche pas la vérification des processus, étape par étape.
+
+Ce procédé d'écrasement facilite l'analyse de la cohérence interne ou le calcul des scores par la suite (cf. chapitre *description*).
+
+La variable qui contient le score global de chaque questionnaire par participant·e porte l'extension sco :
+
+**exemple : `mot13_sco` est la variable de score total de `mot13_1` à `mot13_13` avec les variables qui ont été inversées.**
+
+

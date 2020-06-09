@@ -2,11 +2,12 @@
 
 ## Principes
 
-Avec ressources (fameux document PDF)
-Ce qui est attendu dans un document de type rapport.
+Avec ressources (fameux document PDF de CS durant le pre-doc)
+Ce qui est attendu dans un document de type rapport. (à l'aide du rapport de ZL et de celui en production pour LV)
 
 ## Procédures clés
 
 ## Un mot sur les normes APA
 
 ## Un mot sur Bookdown et GitHub
+cf. chapitre 1.

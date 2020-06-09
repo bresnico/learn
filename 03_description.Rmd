@@ -1,5 +1,16 @@
 # Description des données
 
+### Obtenir une synthèse de données
+
+```{r exemplex, echo=TRUE, eval=FALSE}
+#Quelques données sur l'état des participants au Temps 1 et au Temps 2 avant suppression des ID non-membres d'une paire entre T1 et T2.
+d_t1_sum <- d_t1 %>% 
+  group_by(group,sex) %>% 
+  summarise(n=n(),
+            age_moy=round(mean(age),
+                          digits=1)) 
+```
+
 ## Princpes
 
 ## Procédures
@@ -7,6 +18,9 @@
 ## Tableaux
 
 ## Plots
+
+intégrer mes trouvailles de crips2019 et ce qu'un plot doit montrer.
+
 
 Travail avec Zoe. Notes à intégrer : 
 

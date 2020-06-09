@@ -52,6 +52,69 @@
 
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 </head>
 
@@ -71,13 +134,19 @@
 <li class="chapter" data-level="2.1" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#github-et-structure-des-dossiers-locaux"><i class="fa fa-check"></i><b>2.1</b> GitHub et structure des dossiers locaux</a></li>
 <li class="chapter" data-level="2.2" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#rstudio-et-packages"><i class="fa fa-check"></i><b>2.2</b> RStudio et packages</a></li>
 <li class="chapter" data-level="2.3" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#sublime-text-et-packages."><i class="fa fa-check"></i><b>2.3</b> Sublime Text et Packages.</a></li>
+<li class="chapter" data-level="2.4" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#scrivener-3-zotero-betterbibtext---rédaction-darticles-longs"><i class="fa fa-check"></i><b>2.4</b> Scrivener 3 + Zotero + BetterBibText - Rédaction d’articles longs</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="préparation-des-données.html"><a href="préparation-des-données.html"><i class="fa fa-check"></i><b>3</b> Préparation des données</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="préparation-des-données.html"><a href="préparation-des-données.html#bonnes-pratiques-dans-le-système-de-récolte-des-données-qualtrics"><i class="fa fa-check"></i><b>3.1</b> Bonnes pratiques dans le système de récolte des données (Qualtrics, …)</a></li>
+<li class="chapter" data-level="3.2" data-path="préparation-des-données.html"><a href="préparation-des-données.html#premières-étapes-dans-r-en-principe-les-noms-des-variables-sont-sains"><i class="fa fa-check"></i><b>3.2</b> Premières étapes dans R (en principe, les noms des variables sont sains)</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="préparation-des-données.html"><a href="préparation-des-données.html#ajout-de-la-variable-de-temps-dans-chaque-df"><i class="fa fa-check"></i><b>3.2.1</b> ajout de la variable de temps dans chaque df</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="description-des-données.html"><a href="description-des-données.html"><i class="fa fa-check"></i><b>4</b> Description des données</a>
 <ul>
+<li class="chapter" data-level="4.0.1" data-path="description-des-données.html"><a href="description-des-données.html#obtenir-une-synthèse-de-données"><i class="fa fa-check"></i><b>4.0.1</b> Obtenir une synthèse de données</a></li>
 <li class="chapter" data-level="4.1" data-path="description-des-données.html"><a href="description-des-données.html#princpes"><i class="fa fa-check"></i><b>4.1</b> Princpes</a></li>
 <li class="chapter" data-level="4.2" data-path="description-des-données.html"><a href="description-des-données.html#procédures"><i class="fa fa-check"></i><b>4.2</b> Procédures</a></li>
 <li class="chapter" data-level="4.3" data-path="description-des-données.html"><a href="description-des-données.html#tableaux"><i class="fa fa-check"></i><b>4.3</b> Tableaux</a></li>
@@ -111,8 +180,8 @@
 <h1><span class="header-section-number">5</span> Rapport</h1>
 <div id="principes" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> Principes</h2>
-<p>Avec ressources (fameux document PDF)
-Ce qui est attendu dans un document de type rapport.</p>
+<p>Avec ressources (fameux document PDF de CS durant le pre-doc)
+Ce qui est attendu dans un document de type rapport. (à l’aide du rapport de ZL et de celui en production pour LV)</p>
 </div>
 <div id="procédures-clés" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> Procédures clés</h2>
@@ -122,6 +191,7 @@ Ce qui est attendu dans un document de type rapport.</p>
 </div>
 <div id="un-mot-sur-bookdown-et-github" class="section level2" number="5.4">
 <h2><span class="header-section-number">5.4</span> Un mot sur Bookdown et GitHub</h2>
+<p>cf. chapitre 1.</p>
 
 </div>
 </div>
