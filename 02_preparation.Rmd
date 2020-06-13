@@ -56,6 +56,8 @@ d_t2 <- d_t2_raw %>%
          id=tolower(id))
 ```
 
+> On est à présent aussi capable de présenter une manière de travailler avec des dates quand on a un seul df issu de Qualtrics : intégrer ici le cas de ors2020_ad.
+
 ### création d'un data frame unique
 
 A ce stade, il ne semble pas y avoir de raison au maintien de 2 df différents. On peut créer un df unique à l'aide, simplement, de `bind_rows`. Cela nous évite de doubler les manipulations au temps 1 et au temps 2.
