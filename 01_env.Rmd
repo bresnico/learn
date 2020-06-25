@@ -75,7 +75,7 @@ d_long <- d_long %>%
 
 On dispose en l'état de la version 4.0.0 de R ainsi que de la version 1.2.5042 de RStudio.
 
-Différents ajouts comme Xquartz ou des modules liés à LaTeX sont également installés, *mais honnêtement, on a perdu de vue leur rôle plus ou moins nécessaire sachant que LaTeX est certes nécessaire pour les sorties PDF sans que toutes les extensions liées à LaTex le soient... Ce sera à clarifier au prochain clean install.*
+Différents ajouts comme Xquartz ou des modules liés à LaTeX sont également installés, *mais honnêtement, on a perdu de vue leur rôle plus ou moins nécessaire sachant que LaTeX est certes nécessaire pour les sorties PDF sans que toutes les extensions liées à LaTex le soient... Ce sera à clarifier au prochain clean install.* Pour la version PC, on a installée tinyTEX 'tinytex::install_tinytex()' directement 'TinyTeX to C:\Users\nbr\AppData\Roaming/TinyTeX' depuis la console (sinon, pas de génération de PDF sur le PC).
 
 Dans R, les packages suivants sont installés:
 
