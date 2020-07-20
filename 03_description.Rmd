@@ -25,7 +25,7 @@ d_long_paired_sum2 <- d_long_paired %>%
             mean_sho4=mean(sho_4))
 ```
 
-## Princpes
+## Principes
 
 ## Procédures
 

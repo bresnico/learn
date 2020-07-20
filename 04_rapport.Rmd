@@ -5,6 +5,12 @@
 Avec ressources (fameux document PDF de CS durant le pre-doc)
 Ce qui est attendu dans un document de type rapport. (à l'aide du rapport de ZL et de celui en production pour LV)
 
+Kable et KableExtra
+
+bon affichage d'un tableau
+
+insérer image externe
+
 ## Procédures clés
 
 ## Un mot sur les normes APA

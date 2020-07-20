@@ -2,32 +2,32 @@
 
 Au sein de ce chapitre, on cherche à atteindre le double objectif de/d' :
 
-+ expliciter une manière que l'on espère *élégante* et *efficace* **(minimum d'effort pour le maximum d'efficacité)** de préparer les données.
-+ se conformer aux apprentissages et pratiques en traitement des données (et progresser).
++ expliciter une manière que l'on espère *élégante* et *efficace* *- Le minimum d'effort pour le maximum d'efficacité) -* de préparer les données
++ se conformer aux apprentissages et pratiques en traitement des données (et progresser)
 
 On cherche dans la mesure du possible à toujours travailler avec des *tidy datas* et à utiliser en priorité les fonctions de la série de packages de `tidyverse`.
 
 ## Bonnes pratiques dans le système de récolte des données (Qualtrics, ...)
 
-Chaque participant·e reçoit un *id* partiellement anonymisé. Il est fourni par le chercheur (et n'est pas construit par le ou la participant·e). L'*id* ne contient que des chiffres pour simplifier le problème des majuscules/minuscules à la saisie et éviter les confusions entre le *zéro* et la lettre *o* (oui oui, c'est du vécu). Ceci signifie que l'*id* dispose d'une structure qui permet de/d' :
+Chaque participant·e reçoit un *id* partiellement anonymisé. Il est fourni par l'équipe de recherche (ce n'est pas construit par le ou la participant·e). L'*id* ne contient que des chiffres pour simplifier le problème des majuscules/minuscules à la saisie et éviter les confusions entre le *zéro* et la lettre *o* (oui oui, c'est du vécu). Ceci signifie que l'*id* dispose d'une structure qui permet de/d' :
 
 + évaluer son authenticité
 + faciliter la catégorisation des données
-+ repérer efficacement les *id* et leur catégorisation dans les traitement ultérieurs.
++ repérer efficacement les *id* et leur catégorisation dans les traitement ultérieurs
 
-**exemple : un *id* comme *12.47.694* est structuré comme suit *classe12.constantearbitraire47.nombrealéatoireà3chiffres*.**  
+> Exemple : un *id* comme *12.47.694* est structuré comme suit *groupe12.constantearbitraire47.nombrealéatoireà3chiffres.*
 
 Chaque *id* est **vérifié** dans Qualtrics, ce qui signifie qu'un·e participant·e doit confirmer l'*id* pour que le système passe à la suite. On relève aussi l'intérêt de demander à l'utilisateur·trice de **confirmer son groupe d'appartenance** en cochant un facteur dans une **liste imposée** dans Qualtrics. Ceci a l'avantage de repérer les saisies fantasques (une personne met un *id* bidon / un·e participant·e s'inscrit avec le bon *id* mais dans le mauvais groupe, ...).
-Dans la préparation des données, il semble que l'on gagne ainsi un temps important pour trier les données valables et que la confiance dans les données s'en trouve augmentée. 
+Dans la préparation des données, il semble que l'on gagne ainsi un temps important pour trier les données valables. La confiance dans les données s'en trouve augmentée. 
 On relève toutefois une faiblesse : le code n'est pas 100% anonyme et on peut toujours remonter à un groupe de participant·es. Il faut alors en amont s'engager à détruire le document qui a permis la génération des *id*.
 
 Chaque questionnaire est identifié par 3 premières lettre significatives, le nombre d'items et un `_`:
 
-**exemple : Questionnaire sur la motivation scolaire en 13 items devient `mot13`.**
+> Exemple : Questionnaire sur la motivation scolaire en 13 items est identifié par `mot13`.
 
-Ensuite, chacun des items est proprement nommé par ordre d'apparition :
+Ensuite, chacun des items est proprement nommé par ordre d'apparition, ce qui est fondamental, notamment pour le traitement des **items inversés** :
 
-**exemple : `mot13_1`, `mot13_2`, ..., `mot13_13` (il semble que Qualtrics ajoute par défaut le *underscore_* )**
+> Exemple : `mot13_1`, `mot13_2`, ..., `mot13_13` (il semble que Qualtrics ajoute par défaut le *underscore_* )
 
 ## Premières étapes dans R (en principe, les noms des variables sont sains)
 
@@ -42,8 +42,10 @@ d_t1_raw <- read_excel("crips2019_lv_raw_t1.xlsx")
 d_t2_raw <- read_excel("crips2019_lv_raw_t2.xlsx")
 ```
 
-### ajout de la variable de temps dans chaque df
-Dans cet exemple, on règle en même temps le problème des *id* qui contiennent des majuscules.
+### ajout de la variable de temps dans chaque df (cas simple)
+Chaque fichier représente un temps de mesure. Il nous suffit d'ajouter une variable indiquant cette information.
+
+Dans cet exemple, on règle en même temps le problème des *id* qui contiennent éventuellement des majuscules.
 ```{r exemple4, echo=TRUE, eval=FALSE}
 #Ajout de la variable temps sur chaque df et normalisation des id en minuscule.
 
@@ -56,11 +58,33 @@ d_t2 <- d_t2_raw %>%
          id=tolower(id))
 ```
 
-> On est à présent aussi capable de présenter une manière de travailler avec des dates quand on a un seul df issu de Qualtrics : intégrer ici le cas de ors2020_ad.
+### catégorisation de la variable de temps (cas avec horodatage préalable)
+Quand on possède un unique fichier regroupant toutes les observations, on peut catégoriser les données à partir de l'horodateur.
+
+```{r exemple4bis, echo=TRUE, eval=FALSE}
+#modification de la variable "RecordedDate" en "date" en temps 1 et temps 2 tout en filtrant les id enregistrés hors temps 1 et temps 2.
+#mais on commence par la renommer.
+
+d <- d %>% 
+  rename(date = RecordedDate) %>%  #dans cet ordre.
+  mutate(id = tolower(id)) #gestion de la casse.
+
+d <- d %>% 
+  mutate(
+    date = case_when(date >= as.POSIXct("01.08.2019", format="%d.%m.%Y", tz="utc") & date <= as.POSIXct("31.08.2019", format="%d.%m.%Y", tz="utc") ~ "temps 1",
+                     date >= as.POSIXct("01.06.2020", format="%d.%m.%Y", tz="utc") & date <= as.POSIXct("30.06.2020", format="%d.%m.%Y", tz="utc") ~ "temps 2",
+                     TRUE ~ "autre temps")) #on privilégie case_when car on a 3 conditions et on va gérer les dates.
+
+#Au passage, R a modifié le type de variable "date". On le laisser respirer... et on filtre... (si j'intègre filter dans le pipe, ça bug...)
+
+d <- d %>% filter(date =="temps 1" | date == "temps 2")
+```
+
+> On est pas encore confiant sur la qualité du code ci-dessus.
 
 ### création d'un data frame unique
 
-A ce stade, il ne semble pas y avoir de raison au maintien de 2 df différents. On peut créer un df unique à l'aide, simplement, de `bind_rows`. Cela nous évite de doubler les manipulations au temps 1 et au temps 2.
+A ce stade, à partir du cas simple, il ne semble pas y avoir de raison au maintien de 2 df différents. On peut créer un df unique à l'aide, simplement, de `bind_rows`. Cela nous évite de doubler les manipulations au temps 1 et au temps 2.
 
 Au préalable, on s'est assuré que les noms des variables correspondaient à notre nomenclature, et que l'ordre des questions dans chaque questionnaire était le même au *temps 1* et au *temps 2*.
 
@@ -97,15 +121,16 @@ d_long <- d_long %>%
          mot16__15 = 8 - mot16__15,
          mot16__16 = 8 - mot16__16)
 ```
->*Le code paraît fastidieux et potentiellement source d'erreurs. De plus, ce recodage s'accompagne d'une feuille annexe sur laquelle on a noté avec prudence les items en cause et la formule pour inverser les scores... On ne sait mieux faire.*
+
+> Le code paraît fastidieux et potentiellement source d'erreurs. De plus, ce recodage s'accompagne d'une feuille annexe sur laquelle on a noté avec prudence les items en cause et la formule pour inverser les scores... On ne sait mieux faire...
 
 Ce procédé d'écrasement facilite l'analyse de la cohérence interne ou le calcul des scores par la suite (cf. chapitre *description*).
 
 ### calcul du score de chaque questionnaire par observation
 
-La variable qui contient le score global de chaque questionnaire par participant·e porte l'extension sco :
+La variable qui contient le score global de chaque questionnaire par participant·e porte l'extension *_sco* :
 
-**exemple : `mot13_sco` est la variable de score total de `mot13_1` à `mot13_13` avec les variables qui ont été inversées.**
+> Exemple : `mot13_sco` est la variable de score total de `mot13_1` à `mot13_13` avec les variables qui ont été inversées (sans conservation dans le df de l'item non-inversé).
 
 ```{r exemple7, echo=TRUE, eval=FALSE}
 #Recondage des variables au score inversé
@@ -122,19 +147,23 @@ d_long <- d_long %>%
          mot_sco = rowMeans(select(.,starts_with("hbs")),na.rm =T))
 
 ```
+
 > De nouveau, on ne crée pas d'objet intermédiaire sachant que R sait très bien nous permettre de vérifier le processus, étape par étape.
 
-Ce code paraît très efficace. Il se base sur notre nomenclature sans risque d'erreur, indépendamment du nombre de variable ou de la position des colonnes. On apprécie (même si on ne comprend pas encore la fonction ´select´et son fonctionnement).
+Ce code paraît très efficace. Il se base sur notre nomenclature sans risque d'erreur, indépendamment du nombre de variable ou de la position des colonnes. 
 
-### Filtrage des observations 
+> On apprécie, même si on ne comprend pas encore à satisfaction la fonction ´select´et son fonctionnement.
+
+### filtrage des observations 
 
 Ici, on a essayé de développer une technique pour ne garder que les *id* qui se retrouvent strictement au temps 1 et au temps 2.
 
 Les enjeux sont cruciaux :
 
-+ on doit s'assurer qu'un même *id* ne se retrouve pas plusieurs fois dans le même temps (un·e participant·e peut avoir remplis 2 fois le questionnaire du temps, p.ex.).
-+ On doit aussi s'assurer que nous ferons nos comparaisons temps 1 / temps 2 sur des données complètes.
-C'est notre présomption de base. Il est dès lors important de filtrer les observations.
++ on doit s'assurer qu'un même *id* ne se retrouve pas plusieurs fois dans le même temps (un·e participant·e peut avoir rempli 2 fois le questionnaire du temps, p.ex.)
++ on doit aussi s'assurer que nous ferons nos comparaisons temps 1 / temps 2 sur des données complètes
+
+C'est notre présomption de base. Il est dès lors important de filtrer les observations de manière stricte.
 
 Pour cela, nous avons :
 
@@ -152,7 +181,8 @@ d_comp <- d_long %>%
   filter(n==2) %>% #on ne garde que les paires de id qui se retrouvent dans t1 et t2. C'est notre grosse perte de données de ce traitement
   ungroup()
 ```
-> *On devrait vérifier la validité de cette méthode, sur le plan des bonnes pratiques stat, et aussi sur le plan du codage dans R...et aussi s'assurer qu'elle fonctionne bien comme on le pense en la mettant à l'épreuve.*
+
+> On devrait vérifier la validité de cette méthode, sur le plan des bonnes pratiques stat, et aussi sur le plan du codage dans R...et aussi s'assurer qu'elle fonctionne bien comme on le pense en la mettant à l'épreuve.
 
 + créé un nouveau df qui ne contient plus que les paires souhaitées
 ```{r exemple9, echo=TRUE, eval=FALSE}
@@ -164,8 +194,12 @@ d_long_paired <- d_long %>%
 ```
 
 >On a été un peu sauvé avec le logique `%in%` mais sans bien savoir pourquoi `==` ne convient pas.
->Dans l'example, on en a profité pour modifier les facteurs de la variable `group`. Les forum ne sont pas clair sur la différence entre `ifelse`et `if_else`ou encore `case_when`. On doit clarifier cela.
+>Dans l'example, on en a profité pour modifier les facteurs de la variable `group`. Les forums ne sont pas clairs sur la différence entre `ifelse`et `if_else`ou encore `case_when`. On doit clarifier cela.
 
-### Gestion des données manquantes
+### gestion des données manquantes
 
-### Gestion des données extrêmes 
+> pas encore de bonnes pratiques.
+
+### gestion des données extrêmes 
+
+> pas encore de bonnes pratiques.

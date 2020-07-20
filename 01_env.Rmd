@@ -1,16 +1,18 @@
 # Environnement de travail
 
-La configuration de travail implique GitHub, RStudio, Sublime Text.
+Notre configuration de travail implique:
 
-## GitHub et structure des dossiers locaux
++ *GitHub* qui agit comme lieu principal de **stockage**, de **communication** de codes ou/et résultats, de **versioning**. 
++ *RStudio* dont le fonctionnement avec `bookdown` est particulièrement appréciable
++ *Sublime Text* qui doit être mieux connue mais permet de travailler sur des bouts de code avec une syntaxe couleurs et facilite ainsi le *copier/coller* d'anciens projets vers de nouveaux.
+
+## GitHub et structure des dossiers
 
 <!-- explication, avantages, inconvénients -->
 
-On dispose d'un compte chez GitHub. Le compte est lié à 3 machines (2 macbooks et un pc). Le *commit* et le *push* se réalisent depuis RStudio directement. 
+On dispose d'un compte chez *GitHub*. Le compte est lié à 3 machines (2 macs et un pc). Le *commit* et le *push* se réalisent depuis RStudio directement. Sur chaque machine, on s'offre tout de même une solution *user friendly* avec *GitHub Desktop*.
 
-Sur chaque machine, on s'offre une solution **user friendly** avec GitHub Desktop, bien que RStudio permette de réaliser directement dans le programme le *commit* et le *push*.
-
-Sur chaque machine, on dispose d'une structure de type *Documents > GitHub > r-projects* (attention à la casse).
+Sur chaque machine, on dispose d'une structure des dossiers de type *Documents > GitHub > r-projects* (attention à la casse).
 
 Le dossier *r-projects* contient autant de sous-dossiers que de projets à analyser. 
 
@@ -18,22 +20,28 @@ Chaque sous-dossier a un nom structuré ainsi (attention à la casse) : *context
 
 Dans chaque sous-dossier:
 
-+ un fichier Rproj est disponible et il porte le nom du sous-dossier
-+ un fichier présentant les données brutes (raw) est disponible (en lecture seule de préférence) et il porte un titre de la forme *nomsousdossier_raw*. Il peut être en format .csv ou .xlsx. Si les données brutes sont sur plusieurs fichiers (dans le cas de plusieurs temps de mesure, p.ex., on les distingue avec l'ajout *_t1*, ...)
-+ un fichier de script .R intitulé *nomsousdossier_script*
-+ un fichier Rmarkdown .Rmd intitulé *nomsousdossier_rapport* et rédigé en parallèle du script. Ce rapport général appelle le script pour réaliser les sorties.
-+ les sorties de type HTML, pdf, ou image (png, svg) n'obéissent pas à des règles précises.
++ un fichier *Rproj* est disponible et il porte le nom du sous-dossier
++ un fichier présentant les données brutes (raw) est disponible (en lecture seule de préférence) et il porte un titre de la forme *nomsousdossier_raw*. Il peut être en format *.csv* ou *.xlsx*. Si les données brutes sont sur plusieurs fichiers (dans le cas de plusieurs temps de mesure, par exemple, on les distingue avec l'ajout *_t1*, ...)
++ un fichier de script *.R* intitulé *nomsousdossier_script*
++ un fichier Rmarkdown *.Rmd* intitulé *nomsousdossier_rapport* et rédigé en parallèle du script. Ce rapport général appelle le script pour réaliser les sorties.
+
+> On ne s'est pas encore déterminé sur les bonnes pratiques pour la constitution du rapport en RMarkdown : Est-ce OK et satisfaisant de "simplement" rappeler le script et uniquement "afficher" les objets ?
+
++ les sorties de type *HTML*, *PDF*, ou image (*png*, *svg*, ...) n'obéissent pas à des règles précises.
 + plusieurs rapports peuvent coexister en fonction des destinataires ; ils sont tous une adaptation du rapport "master" décrit plus haut.
 
-L'esprit est d'avoir à tout moment sur GitHub une vision claire des modifications réalisées à travers les différentes étapes de mise à jour des fichier (traçabilité de la démarche). De plus, une attention particulière est accordée à l'écriture d'un code avec une grammaire (le plus possible) conventionnelle qui est lisible et commenté, que ce soit dans le script ou dans le rapport Rmarkdown.
+L'intérêt est d'avoir à tout moment sur GitHub une vision claire des modifications réalisées à travers les différentes étapes de mise à jour des fichier (traçabilité de la démarche). De plus, une attention particulière est accordée à l'écriture d'un code avec une grammaire (le plus possible) conventionnelle qui est lisible et commenté, que ce soit dans le script ou dans le rapport en RMarkdown.
 
 Le script et le rapport se rédigent en parallèle.
 
+## Rédaction du code et grammaire
+
 Le code suivant est, à notre sens, un exemple de bonne pratique car :
 
-+ les commentaires sont présents, précis et concis
-+ les espaces facilitent la lecteur
-+ le code n'est pas (à notre connaissance) inutilement répétitif
++ des titres mis en évidence structurent le code
++ les commentaires sont présents; ils se veulent précis et concis
++ des espaces facilitent la lecture
++ le code n'est pas *- à notre connaissance -* inutilement répétitif
 
 ```{r exemple1, echo=TRUE, eval=FALSE}
 ###############
@@ -54,7 +62,9 @@ vis_hbs <- d_long_paired %>%
   scale_color_brewer("Groupe", palette = "Set1")
 ```
 
-Un autre exemple illustre cette grammaire (on rajoute quelques espaces pour faciliter la lecture et repérer les structures répétitives) :
+Un autre exemple illustre cette grammaire. On rajoute quelques espaces pour faciliter la lecture et repérer les structures *- parfois nécessairement -* répétitives :
+
+> On aimerait toutefois savoir comment éviter ces répétitions. Notamment quand on génère 10 graphiques qui ne varient, dans le code, qu'au niveau de l'axe Y et le titre, par exemple.
 
 ```{r exemple2, echo=TRUE, eval=FALSE}
 #Création des moyennes de chaque questionnaire pour chaque observation
@@ -73,9 +83,13 @@ d_long <- d_long %>%
 
 ## RStudio et packages
 
-On dispose en l'état de la version 4.0.0 de R ainsi que de la version 1.2.5042 de RStudio.
+On dispose en l'état de la version 4.0.2 de R ainsi que de la version 1.3.959 de RStudio.
 
-Différents ajouts comme Xquartz ou des modules liés à LaTeX sont également installés, *mais honnêtement, on a perdu de vue leur rôle plus ou moins nécessaire sachant que LaTeX est certes nécessaire pour les sorties PDF sans que toutes les extensions liées à LaTex le soient... Ce sera à clarifier au prochain clean install.* Pour la version PC, on a installée tinyTEX 'tinytex::install_tinytex()' directement 'TinyTeX to C:\Users\nbr\AppData\Roaming/TinyTeX' depuis la console (sinon, pas de génération de PDF sur le PC).
+Sur les macs, différents ajouts comme Xquartz ou des modules liés à LaTeX sont également installés.
+
+> Mais honnêtement, on a perdu de vue leur rôle plus ou moins nécessaire sachant que LaTeX est certes nécessaire pour les sorties PDF sans que toutes les extensions liées à LaTex le soient... Ce sera à clarifier au prochain clean install.
+
+Pour la version PC, on a installé tinyTEX 'tinytex::install_tinytex()' directement 'TinyTeX to C:\Users\nbr\AppData\Roaming/TinyTeX' depuis la console. On rappelle que `LaTeX` est nécessaire à la génération de *PDF*.
 
 Dans R, les packages suivants sont installés:
 
@@ -85,7 +99,7 @@ Dans R, les packages suivants sont installés:
 
 En principe, pour des raisons d'élégance du code, on cherche à limiter la sur-installation de nouveaux packages. Il s'agit d'explorer ce que les packages installés ont à offrir avant de courir sur d'autres fonctions vues sur le web.
 
-## Sublime Text et Packages.
+## Sublime Text et Packages
 
 L'utilisation de Sublime Tex est ergonomique. Les packages du logiciel permettent de travailler comme R Studio, avec toutefois un environnement plus aéré et propice à la rédaction avec des codes couleurs agréables. Il est complémentaire à RStudio mais peut carrément le remplacer pour certaines courtes étapes de rédaction.
 
@@ -94,12 +108,11 @@ Les packages installés sont:
 + sur PC : R-Box, R-IDE, LSP
 + sur MAC : R-Box, SendCode
 
-On doit encore clarifier comment lier sur PC et MAC GitHub. Mais ce n'est pas prioritaire.
-GitHub sur Sublime Text ??? Emmet, git, sublime github. https://gist.github.com/KedrikG/f7b955dc371b1204ec76ce862e2dcd2e
+> On doit encore clarifier comment lier sur PC et MAC GitHub. Mais ce n'est pas prioritaire. GitHub sur Sublime Text ? Emmet, git, sublime github. https://gist.github.com/KedrikG/f7b955dc371b1204ec76ce862e2dcd2e
 
 ## Scrivener 3 + Zotero + BetterBibText - Rédaction d'articles longs
 
-On doit déterminer comment travailler en `RMarkdown` pour des articles longs via `Scrivener 3`. Ce logiciel a l'avantage de facilement découper l'article en plusieurs zones de travail et "fusionner" le tout à l'export. De plus, on peut lier la rédaction à Zotero via un fichier `Bibtex` ce qui est très intéressant.
+On doit déterminer comment travailler en `RMarkdown` pour des articles longs via `Scrivener 3`. Ce logiciel a l'avantage de facilement découper l'article en plusieurs zones de travail et *fusionner* le tout à l'export. De plus, on peut lier dynamiquement la rédaction à Zotero via un fichier `Bibtex` ce qui est très intéressant.
 
 On pense aussi à rassembler les éléments rédigés dans Scrivener et compiler le tout avec `Bookdown` sous R.
 
@@ -108,3 +121,8 @@ Un hypothétique *workflow" serait : script dans R > ébauche de rapport dans R 
 Mais ce n'est pas optimal. Notre souhait est de pouvoir, p.ex., modifier une donnée dans la source des données (le fichier brut) et cliquer sur un (voire deux) boutons pour mettre à jour l'article final ! On n'y est pas encore !!
 
 L'organisation de la rédaction est un gros chantier qui n'est pas du tout structuré en l'état.
+
+La figure \@ref(fig:working-process) illustre notre potentiel workflow :
+```{r working-process, out.width='100%', fig.show='hold', fig.cap='Tentative de préparation d\'un workflow en cas de rédaction d\'article long'}
+knitr::include_graphics('images/writing-process.png')
+```

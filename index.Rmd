@@ -1,12 +1,12 @@
 ---
-title: "Notes personnelles : Principes stats, procédures et outils avec R"
+title: "Notes personnelles: Principes stats, procédures et outils avec R"
 author: "Nicolas Bressoud"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: bookdown::gitbook
 site: bookdown::bookdown_site
 ---
 
-<!-- le setup peut se régler et influencer tout le document.-->
+<!-- rappel: le setup peut se régler et influencer tout le document.-->
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
