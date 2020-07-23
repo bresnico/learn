@@ -29,6 +29,12 @@ d_long_paired_sum2 <- d_long_paired %>%
 
 ## Procédures
 
+## Le cas des boucles
+
+La fonction `for` semble très utile pour faire faire des boucles. Quand je dois réaliser 10 plots de 10 VI, je peux juste préparer mon plot et l'intégrer dans une boucle. La contrainte semble être liée à `aes` et peut-être aussi au titre du plot dont on aimerait aussi "automatiser" la génération.
+
+Infos à comprendre et tester ici : https://statistique-et-logiciel-r.com/comment-utiliser-ggplot-dans-une-boucle-ou-dans-une-fonction/
+
 ## Tableaux
 
 ## Plots
