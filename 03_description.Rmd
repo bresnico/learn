@@ -35,6 +35,40 @@ La fonction `for` semble très utile pour faire faire des boucles. Quand je dois
 
 Infos à comprendre et tester ici : https://statistique-et-logiciel-r.com/comment-utiliser-ggplot-dans-une-boucle-ou-dans-une-fonction/
 
+intégrer et expliquer le cas d'école réussi avec les données IBE:
+
+```{r exemple10bis, echo=TRUE, eval=FALSE}
+
+#######################
+#visualisation en loop#
+#######################
+# Liste des noms des variables que l'on veut (a à p uniquement).
+var_list = names(d_paired)[6:21]
+
+# création de la liste pour accueillir les 16 (21-5) plots
+plot_list = list()
+
+for (i in 1:16) {
+  p <- d_paired %>% 
+    ggplot() +
+    aes(x = dat) +
+    aes_string(y = var_list[i]) +
+    geom_jitter(size = 5, alpha = .5, width = 0.3) +
+    stat_summary(fun = mean, geom = "point", size = 3, shape = 4, color = "red") +
+    stat_summary(fun = mean, geom = "line", aes(group = 1), color = "red") +
+    labs(title = paste("Mesure item",i), y = "Score") +
+    theme(plot.title = element_text(hjust = 0.5))  
+  plot_list[[i]] = p
+}
+dev.off()
+
+# enregistrement des plots en png par fichier séparé avec un nom correspondant au nom de la variable et non de son numéro.
+for (i in 1:16) {
+  temp_plot = plot_list[[i]]
+  ggsave(temp_plot, file=paste0("plot_", var_list[[i]],".png"), width = 14, height = 10, units = "cm")
+}
+```
+
 ## Tableaux
 
 ## Plots

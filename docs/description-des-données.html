@@ -220,6 +220,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">4.4</span> Le cas des boucles</h2>
 <p>La fonction <code>for</code> semble très utile pour faire faire des boucles. Quand je dois réaliser 10 plots de 10 VI, je peux juste préparer mon plot et l’intégrer dans une boucle. La contrainte semble être liée à <code>aes</code> et peut-être aussi au titre du plot dont on aimerait aussi “automatiser” la génération.</p>
 <p>Infos à comprendre et tester ici : <a href="https://statistique-et-logiciel-r.com/comment-utiliser-ggplot-dans-une-boucle-ou-dans-une-fonction/" class="uri">https://statistique-et-logiciel-r.com/comment-utiliser-ggplot-dans-une-boucle-ou-dans-une-fonction/</a></p>
+<p>intégrer et expliquer le cas d’école réussi avec les données IBE:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="description-des-données.html#cb13-1" aria-hidden="true"></a><span class="co">#######################</span></span>
+<span id="cb13-2"><a href="description-des-données.html#cb13-2" aria-hidden="true"></a><span class="co">#visualisation en loop#</span></span>
+<span id="cb13-3"><a href="description-des-données.html#cb13-3" aria-hidden="true"></a><span class="co">#######################</span></span>
+<span id="cb13-4"><a href="description-des-données.html#cb13-4" aria-hidden="true"></a><span class="co"># Liste des noms des variables que l&#39;on veut (a à p uniquement).</span></span>
+<span id="cb13-5"><a href="description-des-données.html#cb13-5" aria-hidden="true"></a>var_list =<span class="st"> </span><span class="kw">names</span>(d_paired)[<span class="dv">6</span><span class="op">:</span><span class="dv">21</span>]</span>
+<span id="cb13-6"><a href="description-des-données.html#cb13-6" aria-hidden="true"></a></span>
+<span id="cb13-7"><a href="description-des-données.html#cb13-7" aria-hidden="true"></a><span class="co"># création de la liste pour accueillir les 16 (21-5) plots</span></span>
+<span id="cb13-8"><a href="description-des-données.html#cb13-8" aria-hidden="true"></a>plot_list =<span class="st"> </span><span class="kw">list</span>()</span>
+<span id="cb13-9"><a href="description-des-données.html#cb13-9" aria-hidden="true"></a></span>
+<span id="cb13-10"><a href="description-des-données.html#cb13-10" aria-hidden="true"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">16</span>) {</span>
+<span id="cb13-11"><a href="description-des-données.html#cb13-11" aria-hidden="true"></a>  p &lt;-<span class="st"> </span>d_paired <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb13-12"><a href="description-des-données.html#cb13-12" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>() <span class="op">+</span></span>
+<span id="cb13-13"><a href="description-des-données.html#cb13-13" aria-hidden="true"></a><span class="st">    </span><span class="kw">aes</span>(<span class="dt">x =</span> dat) <span class="op">+</span></span>
+<span id="cb13-14"><a href="description-des-données.html#cb13-14" aria-hidden="true"></a><span class="st">    </span><span class="kw">aes_string</span>(<span class="dt">y =</span> var_list[i]) <span class="op">+</span></span>
+<span id="cb13-15"><a href="description-des-données.html#cb13-15" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_jitter</span>(<span class="dt">size =</span> <span class="dv">5</span>, <span class="dt">alpha =</span> <span class="fl">.5</span>, <span class="dt">width =</span> <span class="fl">0.3</span>) <span class="op">+</span></span>
+<span id="cb13-16"><a href="description-des-données.html#cb13-16" aria-hidden="true"></a><span class="st">    </span><span class="kw">stat_summary</span>(<span class="dt">fun =</span> mean, <span class="dt">geom =</span> <span class="st">&quot;point&quot;</span>, <span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">shape =</span> <span class="dv">4</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span></span>
+<span id="cb13-17"><a href="description-des-données.html#cb13-17" aria-hidden="true"></a><span class="st">    </span><span class="kw">stat_summary</span>(<span class="dt">fun =</span> mean, <span class="dt">geom =</span> <span class="st">&quot;line&quot;</span>, <span class="kw">aes</span>(<span class="dt">group =</span> <span class="dv">1</span>), <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span></span>
+<span id="cb13-18"><a href="description-des-données.html#cb13-18" aria-hidden="true"></a><span class="st">    </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="kw">paste</span>(<span class="st">&quot;Mesure item&quot;</span>,i), <span class="dt">y =</span> <span class="st">&quot;Score&quot;</span>) <span class="op">+</span></span>
+<span id="cb13-19"><a href="description-des-données.html#cb13-19" aria-hidden="true"></a><span class="st">    </span><span class="kw">theme</span>(<span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">hjust =</span> <span class="fl">0.5</span>))  </span>
+<span id="cb13-20"><a href="description-des-données.html#cb13-20" aria-hidden="true"></a>  plot_list[[i]] =<span class="st"> </span>p</span>
+<span id="cb13-21"><a href="description-des-données.html#cb13-21" aria-hidden="true"></a>}</span>
+<span id="cb13-22"><a href="description-des-données.html#cb13-22" aria-hidden="true"></a><span class="kw">dev.off</span>()</span>
+<span id="cb13-23"><a href="description-des-données.html#cb13-23" aria-hidden="true"></a></span>
+<span id="cb13-24"><a href="description-des-données.html#cb13-24" aria-hidden="true"></a><span class="co"># enregistrement des plots en png par fichier séparé avec un nom correspondant au nom de la variable et non de son numéro.</span></span>
+<span id="cb13-25"><a href="description-des-données.html#cb13-25" aria-hidden="true"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">16</span>) {</span>
+<span id="cb13-26"><a href="description-des-données.html#cb13-26" aria-hidden="true"></a>  temp_plot =<span class="st"> </span>plot_list[[i]]</span>
+<span id="cb13-27"><a href="description-des-données.html#cb13-27" aria-hidden="true"></a>  <span class="kw">ggsave</span>(temp_plot, <span class="dt">file=</span><span class="kw">paste0</span>(<span class="st">&quot;plot_&quot;</span>, var_list[[i]],<span class="st">&quot;.png&quot;</span>), <span class="dt">width =</span> <span class="dv">14</span>, <span class="dt">height =</span> <span class="dv">10</span>, <span class="dt">units =</span> <span class="st">&quot;cm&quot;</span>)</span>
+<span id="cb13-28"><a href="description-des-données.html#cb13-28" aria-hidden="true"></a>}</span></code></pre></div>
 </div>
 <div id="tableaux" class="section level2" number="4.5">
 <h2><span class="header-section-number">4.5</span> Tableaux</h2>
