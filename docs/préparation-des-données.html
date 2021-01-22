@@ -32,6 +32,7 @@
   
 <link rel="prev" href="environnement-de-travail.html"/>
 <link rel="next" href="description-des-données.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -49,24 +50,21 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -86,7 +84,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -132,16 +130,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Préambule</a></li>
-<li class="chapter" data-level="2" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html"><i class="fa fa-check"></i><b>2</b> Environnement de travail</a><ul>
+<li class="chapter" data-level="2" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html"><i class="fa fa-check"></i><b>2</b> Environnement de travail</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#github-et-structure-des-dossiers"><i class="fa fa-check"></i><b>2.1</b> GitHub et structure des dossiers</a></li>
 <li class="chapter" data-level="2.2" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#rédaction-du-code-et-grammaire"><i class="fa fa-check"></i><b>2.2</b> Rédaction du code et grammaire</a></li>
 <li class="chapter" data-level="2.3" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#rstudio-et-packages"><i class="fa fa-check"></i><b>2.3</b> RStudio et packages</a></li>
 <li class="chapter" data-level="2.4" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#sublime-text-et-packages"><i class="fa fa-check"></i><b>2.4</b> Sublime Text et Packages</a></li>
 <li class="chapter" data-level="2.5" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#scrivener-3-zotero-betterbibtext---rédaction-darticles-longs"><i class="fa fa-check"></i><b>2.5</b> Scrivener 3 + Zotero + BetterBibText - Rédaction d’articles longs</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="préparation-des-données.html"><a href="préparation-des-données.html"><i class="fa fa-check"></i><b>3</b> Préparation des données</a><ul>
+<li class="chapter" data-level="3" data-path="préparation-des-données.html"><a href="préparation-des-données.html"><i class="fa fa-check"></i><b>3</b> Préparation des données</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="préparation-des-données.html"><a href="préparation-des-données.html#bonnes-pratiques-dans-le-système-de-récolte-des-données-qualtrics"><i class="fa fa-check"></i><b>3.1</b> Bonnes pratiques dans le système de récolte des données (Qualtrics, …)</a></li>
-<li class="chapter" data-level="3.2" data-path="préparation-des-données.html"><a href="préparation-des-données.html#premières-étapes-dans-r-en-principe-les-noms-des-variables-sont-sains"><i class="fa fa-check"></i><b>3.2</b> Premières étapes dans R (en principe, les noms des variables sont sains)</a><ul>
+<li class="chapter" data-level="3.2" data-path="préparation-des-données.html"><a href="préparation-des-données.html#premières-étapes-dans-r-en-principe-les-noms-des-variables-sont-sains"><i class="fa fa-check"></i><b>3.2</b> Premières étapes dans R (en principe, les noms des variables sont sains)</a>
+<ul>
 <li class="chapter" data-level="3.2.1" data-path="préparation-des-données.html"><a href="préparation-des-données.html#ajout-de-la-variable-de-temps-dans-chaque-df-cas-simple"><i class="fa fa-check"></i><b>3.2.1</b> ajout de la variable de temps dans chaque df (cas simple)</a></li>
 <li class="chapter" data-level="3.2.2" data-path="préparation-des-données.html"><a href="préparation-des-données.html#catégorisation-de-la-variable-de-temps-cas-avec-horodatage-préalable"><i class="fa fa-check"></i><b>3.2.2</b> catégorisation de la variable de temps (cas avec horodatage préalable)</a></li>
 <li class="chapter" data-level="3.2.3" data-path="préparation-des-données.html"><a href="préparation-des-données.html#création-dun-data-frame-unique"><i class="fa fa-check"></i><b>3.2.3</b> création d’un data frame unique</a></li>
@@ -152,7 +153,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2.8" data-path="préparation-des-données.html"><a href="préparation-des-données.html#gestion-des-données-extrêmes"><i class="fa fa-check"></i><b>3.2.8</b> gestion des données extrêmes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="description-des-données.html"><a href="description-des-données.html"><i class="fa fa-check"></i><b>4</b> Description des données</a><ul>
+<li class="chapter" data-level="4" data-path="description-des-données.html"><a href="description-des-données.html"><i class="fa fa-check"></i><b>4</b> Description des données</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="description-des-données.html"><a href="description-des-données.html#obtenir-une-synthèse-de-données"><i class="fa fa-check"></i><b>4.1</b> Obtenir une synthèse de données</a></li>
 <li class="chapter" data-level="4.2" data-path="description-des-données.html"><a href="description-des-données.html#principes"><i class="fa fa-check"></i><b>4.2</b> Principes</a></li>
 <li class="chapter" data-level="4.3" data-path="description-des-données.html"><a href="description-des-données.html#procédures"><i class="fa fa-check"></i><b>4.3</b> Procédures</a></li>
@@ -160,7 +162,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.5" data-path="description-des-données.html"><a href="description-des-données.html#tableaux"><i class="fa fa-check"></i><b>4.5</b> Tableaux</a></li>
 <li class="chapter" data-level="4.6" data-path="description-des-données.html"><a href="description-des-données.html#plots"><i class="fa fa-check"></i><b>4.6</b> Plots</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="rapport.html"><a href="rapport.html"><i class="fa fa-check"></i><b>5</b> Rapport</a><ul>
+<li class="chapter" data-level="5" data-path="rapport.html"><a href="rapport.html"><i class="fa fa-check"></i><b>5</b> Rapport</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="rapport.html"><a href="rapport.html#principes-1"><i class="fa fa-check"></i><b>5.1</b> Principes</a></li>
 <li class="chapter" data-level="5.2" data-path="rapport.html"><a href="rapport.html#procédures-clés"><i class="fa fa-check"></i><b>5.2</b> Procédures clés</a></li>
 <li class="chapter" data-level="5.3" data-path="rapport.html"><a href="rapport.html#un-mot-sur-les-normes-apa"><i class="fa fa-check"></i><b>5.3</b> Un mot sur les normes APA</a></li>
@@ -183,7 +186,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="préparation-des-données" class="section level1">
+<div id="préparation-des-données" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Préparation des données</h1>
 <p>Au sein de ce chapitre, on cherche à atteindre le double objectif de/d’ :</p>
 <ul>
@@ -191,7 +194,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>se conformer aux apprentissages et pratiques en traitement des données (et progresser)</li>
 </ul>
 <p>On cherche dans la mesure du possible à toujours travailler avec des <em>tidy datas</em> et à utiliser en priorité les fonctions de la série de packages de <code>tidyverse</code>.</p>
-<div id="bonnes-pratiques-dans-le-système-de-récolte-des-données-qualtrics" class="section level2">
+<div id="bonnes-pratiques-dans-le-système-de-récolte-des-données-qualtrics" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Bonnes pratiques dans le système de récolte des données (Qualtrics, …)</h2>
 <p>Chaque participant·e reçoit un <em>id</em> partiellement anonymisé. Il est fourni par l’équipe de recherche (ce n’est pas construit par le ou la participant·e). L’<em>id</em> ne contient que des chiffres pour simplifier le problème des majuscules/minuscules à la saisie et éviter les confusions entre le <em>zéro</em> et la lettre <em>o</em> (oui oui, c’est du vécu). Ceci signifie que l’<em>id</em> dispose d’une structure qui permet de/d’ :</p>
 <ul>
@@ -214,109 +217,109 @@ On relève toutefois une faiblesse : le code n’est pas 100% anonyme et on peut
 <p>Exemple : <code>mot13_1</code>, <code>mot13_2</code>, …, <code>mot13_13</code> (il semble que Qualtrics ajoute par défaut le <em>underscore_</em> )</p>
 </blockquote>
 </div>
-<div id="premières-étapes-dans-r-en-principe-les-noms-des-variables-sont-sains" class="section level2">
+<div id="premières-étapes-dans-r-en-principe-les-noms-des-variables-sont-sains" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Premières étapes dans R (en principe, les noms des variables sont sains)</h2>
 <p>On commence par le chargement des packages et l’importation du ou des fichiers de données. Dans cet exemple, on prend le cas (plus complexe) où nous devons gérer et associer deux <code>data frames</code>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="préparation-des-données.html#cb4-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb4-2"><a href="préparation-des-données.html#cb4-2"></a><span class="kw">library</span>(readxl)</span>
-<span id="cb4-3"><a href="préparation-des-données.html#cb4-3"></a></span>
-<span id="cb4-4"><a href="préparation-des-données.html#cb4-4"></a><span class="co"># Importation des données Qualtrics à disposition ----</span></span>
-<span id="cb4-5"><a href="préparation-des-données.html#cb4-5"></a>d_t1_raw &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;crips2019_lv_raw_t1.xlsx&quot;</span>)</span>
-<span id="cb4-6"><a href="préparation-des-données.html#cb4-6"></a>d_t2_raw &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;crips2019_lv_raw_t2.xlsx&quot;</span>)</span></code></pre></div>
-<div id="ajout-de-la-variable-de-temps-dans-chaque-df-cas-simple" class="section level3">
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="préparation-des-données.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb4-2"><a href="préparation-des-données.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb4-3"><a href="préparation-des-données.html#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="préparation-des-données.html#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Importation des données Qualtrics à disposition ----</span></span>
+<span id="cb4-5"><a href="préparation-des-données.html#cb4-5" aria-hidden="true" tabindex="-1"></a>d_t1_raw <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;crips2019_lv_raw_t1.xlsx&quot;</span>)</span>
+<span id="cb4-6"><a href="préparation-des-données.html#cb4-6" aria-hidden="true" tabindex="-1"></a>d_t2_raw <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;crips2019_lv_raw_t2.xlsx&quot;</span>)</span></code></pre></div>
+<div id="ajout-de-la-variable-de-temps-dans-chaque-df-cas-simple" class="section level3" number="3.2.1">
 <h3><span class="header-section-number">3.2.1</span> ajout de la variable de temps dans chaque df (cas simple)</h3>
 <p>Chaque fichier représente un temps de mesure. Il nous suffit d’ajouter une variable indiquant cette information.</p>
 <p>Dans cet exemple, on règle en même temps le problème des <em>id</em> qui contiennent éventuellement des majuscules.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="préparation-des-données.html#cb5-1"></a><span class="co">#Ajout de la variable temps sur chaque df et normalisation des id en minuscule.</span></span>
-<span id="cb5-2"><a href="préparation-des-données.html#cb5-2"></a></span>
-<span id="cb5-3"><a href="préparation-des-données.html#cb5-3"></a>d_t1 &lt;-<span class="st"> </span>d_t1_raw <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb5-4"><a href="préparation-des-données.html#cb5-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">temps=</span><span class="st">&quot;temps 1&quot;</span>,</span>
-<span id="cb5-5"><a href="préparation-des-données.html#cb5-5"></a>         <span class="dt">id=</span><span class="kw">tolower</span>(id)) </span>
-<span id="cb5-6"><a href="préparation-des-données.html#cb5-6"></a></span>
-<span id="cb5-7"><a href="préparation-des-données.html#cb5-7"></a>d_t2 &lt;-<span class="st"> </span>d_t2_raw <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb5-8"><a href="préparation-des-données.html#cb5-8"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">temps=</span><span class="st">&quot;temps 2&quot;</span>,</span>
-<span id="cb5-9"><a href="préparation-des-données.html#cb5-9"></a>         <span class="dt">id=</span><span class="kw">tolower</span>(id))</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="préparation-des-données.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Ajout de la variable temps sur chaque df et normalisation des id en minuscule.</span></span>
+<span id="cb5-2"><a href="préparation-des-données.html#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="préparation-des-données.html#cb5-3" aria-hidden="true" tabindex="-1"></a>d_t1 <span class="ot">&lt;-</span> d_t1_raw <span class="sc">%&gt;%</span> </span>
+<span id="cb5-4"><a href="préparation-des-données.html#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">temps=</span><span class="st">&quot;temps 1&quot;</span>,</span>
+<span id="cb5-5"><a href="préparation-des-données.html#cb5-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">id=</span><span class="fu">tolower</span>(id)) </span>
+<span id="cb5-6"><a href="préparation-des-données.html#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="préparation-des-données.html#cb5-7" aria-hidden="true" tabindex="-1"></a>d_t2 <span class="ot">&lt;-</span> d_t2_raw <span class="sc">%&gt;%</span> </span>
+<span id="cb5-8"><a href="préparation-des-données.html#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">temps=</span><span class="st">&quot;temps 2&quot;</span>,</span>
+<span id="cb5-9"><a href="préparation-des-données.html#cb5-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">id=</span><span class="fu">tolower</span>(id))</span></code></pre></div>
 </div>
-<div id="catégorisation-de-la-variable-de-temps-cas-avec-horodatage-préalable" class="section level3">
+<div id="catégorisation-de-la-variable-de-temps-cas-avec-horodatage-préalable" class="section level3" number="3.2.2">
 <h3><span class="header-section-number">3.2.2</span> catégorisation de la variable de temps (cas avec horodatage préalable)</h3>
 <p>Quand on possède un unique fichier regroupant toutes les observations, on peut catégoriser les données à partir de l’horodateur.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="préparation-des-données.html#cb6-1"></a><span class="co">#modification de la variable &quot;RecordedDate&quot; en &quot;date&quot; en temps 1 et temps 2 tout en filtrant les id enregistrés hors temps 1 et temps 2.</span></span>
-<span id="cb6-2"><a href="préparation-des-données.html#cb6-2"></a><span class="co">#mais on commence par la renommer.</span></span>
-<span id="cb6-3"><a href="préparation-des-données.html#cb6-3"></a></span>
-<span id="cb6-4"><a href="préparation-des-données.html#cb6-4"></a>d &lt;-<span class="st"> </span>d <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb6-5"><a href="préparation-des-données.html#cb6-5"></a><span class="st">  </span><span class="kw">rename</span>(<span class="dt">date =</span> RecordedDate) <span class="op">%&gt;%</span><span class="st">  </span><span class="co">#dans cet ordre.</span></span>
-<span id="cb6-6"><a href="préparation-des-données.html#cb6-6"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">id =</span> <span class="kw">tolower</span>(id)) <span class="co">#gestion de la casse.</span></span>
-<span id="cb6-7"><a href="préparation-des-données.html#cb6-7"></a></span>
-<span id="cb6-8"><a href="préparation-des-données.html#cb6-8"></a>d &lt;-<span class="st"> </span>d <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb6-9"><a href="préparation-des-données.html#cb6-9"></a><span class="st">  </span><span class="kw">mutate</span>(</span>
-<span id="cb6-10"><a href="préparation-des-données.html#cb6-10"></a>    <span class="dt">date =</span> <span class="kw">case_when</span>(date <span class="op">&gt;=</span><span class="st"> </span><span class="kw">as.POSIXct</span>(<span class="st">&quot;01.08.2019&quot;</span>, <span class="dt">format=</span><span class="st">&quot;%d.%m.%Y&quot;</span>, <span class="dt">tz=</span><span class="st">&quot;utc&quot;</span>) <span class="op">&amp;</span><span class="st"> </span>date <span class="op">&lt;=</span><span class="st"> </span><span class="kw">as.POSIXct</span>(<span class="st">&quot;31.08.2019&quot;</span>, <span class="dt">format=</span><span class="st">&quot;%d.%m.%Y&quot;</span>, <span class="dt">tz=</span><span class="st">&quot;utc&quot;</span>) <span class="op">~</span><span class="st"> &quot;temps 1&quot;</span>,</span>
-<span id="cb6-11"><a href="préparation-des-données.html#cb6-11"></a>                     date <span class="op">&gt;=</span><span class="st"> </span><span class="kw">as.POSIXct</span>(<span class="st">&quot;01.06.2020&quot;</span>, <span class="dt">format=</span><span class="st">&quot;%d.%m.%Y&quot;</span>, <span class="dt">tz=</span><span class="st">&quot;utc&quot;</span>) <span class="op">&amp;</span><span class="st"> </span>date <span class="op">&lt;=</span><span class="st"> </span><span class="kw">as.POSIXct</span>(<span class="st">&quot;30.06.2020&quot;</span>, <span class="dt">format=</span><span class="st">&quot;%d.%m.%Y&quot;</span>, <span class="dt">tz=</span><span class="st">&quot;utc&quot;</span>) <span class="op">~</span><span class="st"> &quot;temps 2&quot;</span>,</span>
-<span id="cb6-12"><a href="préparation-des-données.html#cb6-12"></a>                     <span class="ot">TRUE</span> <span class="op">~</span><span class="st"> &quot;autre temps&quot;</span>)) <span class="co">#on privilégie case_when car on a 3 conditions et on va gérer les dates.</span></span>
-<span id="cb6-13"><a href="préparation-des-données.html#cb6-13"></a></span>
-<span id="cb6-14"><a href="préparation-des-données.html#cb6-14"></a><span class="co">#Au passage, R a modifié le type de variable &quot;date&quot;. On le laisser respirer... et on filtre... (si j&#39;intègre filter dans le pipe, ça bug...)</span></span>
-<span id="cb6-15"><a href="préparation-des-données.html#cb6-15"></a></span>
-<span id="cb6-16"><a href="préparation-des-données.html#cb6-16"></a>d &lt;-<span class="st"> </span>d <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(date <span class="op">==</span><span class="st">&quot;temps 1&quot;</span> <span class="op">|</span><span class="st"> </span>date <span class="op">==</span><span class="st"> &quot;temps 2&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="préparation-des-données.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#modification de la variable &quot;RecordedDate&quot; en &quot;date&quot; en temps 1 et temps 2 tout en filtrant les id enregistrés hors temps 1 et temps 2.</span></span>
+<span id="cb6-2"><a href="préparation-des-données.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">#mais on commence par la renommer.</span></span>
+<span id="cb6-3"><a href="préparation-des-données.html#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="préparation-des-données.html#cb6-4" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> d <span class="sc">%&gt;%</span> </span>
+<span id="cb6-5"><a href="préparation-des-données.html#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">date =</span> RecordedDate) <span class="sc">%&gt;%</span>  <span class="co">#dans cet ordre.</span></span>
+<span id="cb6-6"><a href="préparation-des-données.html#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">id =</span> <span class="fu">tolower</span>(id)) <span class="co">#gestion de la casse.</span></span>
+<span id="cb6-7"><a href="préparation-des-données.html#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="préparation-des-données.html#cb6-8" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> d <span class="sc">%&gt;%</span> </span>
+<span id="cb6-9"><a href="préparation-des-données.html#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb6-10"><a href="préparation-des-données.html#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> <span class="fu">case_when</span>(date <span class="sc">&gt;=</span> <span class="fu">as.POSIXct</span>(<span class="st">&quot;01.08.2019&quot;</span>, <span class="at">format=</span><span class="st">&quot;%d.%m.%Y&quot;</span>, <span class="at">tz=</span><span class="st">&quot;utc&quot;</span>) <span class="sc">&amp;</span> date <span class="sc">&lt;=</span> <span class="fu">as.POSIXct</span>(<span class="st">&quot;31.08.2019&quot;</span>, <span class="at">format=</span><span class="st">&quot;%d.%m.%Y&quot;</span>, <span class="at">tz=</span><span class="st">&quot;utc&quot;</span>) <span class="sc">~</span> <span class="st">&quot;temps 1&quot;</span>,</span>
+<span id="cb6-11"><a href="préparation-des-données.html#cb6-11" aria-hidden="true" tabindex="-1"></a>                     date <span class="sc">&gt;=</span> <span class="fu">as.POSIXct</span>(<span class="st">&quot;01.06.2020&quot;</span>, <span class="at">format=</span><span class="st">&quot;%d.%m.%Y&quot;</span>, <span class="at">tz=</span><span class="st">&quot;utc&quot;</span>) <span class="sc">&amp;</span> date <span class="sc">&lt;=</span> <span class="fu">as.POSIXct</span>(<span class="st">&quot;30.06.2020&quot;</span>, <span class="at">format=</span><span class="st">&quot;%d.%m.%Y&quot;</span>, <span class="at">tz=</span><span class="st">&quot;utc&quot;</span>) <span class="sc">~</span> <span class="st">&quot;temps 2&quot;</span>,</span>
+<span id="cb6-12"><a href="préparation-des-données.html#cb6-12" aria-hidden="true" tabindex="-1"></a>                     <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">&quot;autre temps&quot;</span>)) <span class="co">#on privilégie case_when car on a 3 conditions et on va gérer les dates.</span></span>
+<span id="cb6-13"><a href="préparation-des-données.html#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="préparation-des-données.html#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="co">#Au passage, R a modifié le type de variable &quot;date&quot;. On le laisser respirer... et on filtre... (si j&#39;intègre filter dans le pipe, ça bug...)</span></span>
+<span id="cb6-15"><a href="préparation-des-données.html#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="préparation-des-données.html#cb6-16" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> d <span class="sc">%&gt;%</span> <span class="fu">filter</span>(date <span class="sc">==</span><span class="st">&quot;temps 1&quot;</span> <span class="sc">|</span> date <span class="sc">==</span> <span class="st">&quot;temps 2&quot;</span>)</span></code></pre></div>
 <blockquote>
 <p>On est pas encore confiant sur la qualité du code ci-dessus.</p>
 </blockquote>
 </div>
-<div id="création-dun-data-frame-unique" class="section level3">
+<div id="création-dun-data-frame-unique" class="section level3" number="3.2.3">
 <h3><span class="header-section-number">3.2.3</span> création d’un data frame unique</h3>
 <p>A ce stade, à partir du cas simple, il ne semble pas y avoir de raison au maintien de 2 df différents. On peut créer un df unique à l’aide, simplement, de <code>bind_rows</code>. Cela nous évite de doubler les manipulations au temps 1 et au temps 2.</p>
 <p>Au préalable, on s’est assuré que les noms des variables correspondaient à notre nomenclature, et que l’ordre des questions dans chaque questionnaire était le même au <em>temps 1</em> et au <em>temps 2</em>.</p>
 <p>Les éventuelles nouvelles variables du temps 2 sont bien traitées grâce à l’ajout de <code>NA</code> pour les observations du temps 1.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="préparation-des-données.html#cb7-1"></a><span class="co">#Mise en formation long sur un df</span></span>
-<span id="cb7-2"><a href="préparation-des-données.html#cb7-2"></a></span>
-<span id="cb7-3"><a href="préparation-des-données.html#cb7-3"></a>d_long &lt;-<span class="st"> </span><span class="kw">bind_rows</span>(d_t1,d_t2)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="préparation-des-données.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Mise en formation long sur un df</span></span>
+<span id="cb7-2"><a href="préparation-des-données.html#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="préparation-des-données.html#cb7-3" aria-hidden="true" tabindex="-1"></a>d_long <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(d_t1,d_t2)</span></code></pre></div>
 <blockquote>
 <p>On choisit la mise en format <em>long</em> (au lieu de <em>wide</em>) pour correspondre au attentes du traitement <em>tidy</em> des données. Cela signifie que chaque ligne est une observation et chaque colonne est une variable. Ceci implique que chaque participant·e se retrouve dans deux lignes : une concernant la modalité (facteur) <strong>temps 1</strong> et l’autre selon la modalité <strong>temps 2</strong>. C’était déroutant au début mais on a adopté cette manière de faire.</p>
 </blockquote>
 </div>
-<div id="gestion-des-items-à-inverser" class="section level3">
+<div id="gestion-des-items-à-inverser" class="section level3" number="3.2.4">
 <h3><span class="header-section-number">3.2.4</span> gestion des items à inverser</h3>
 <p>Les items à inverser sont traités en étant strictement remplacés via la fonction <code>mutate()</code> dans le cadre de l’enregistrement d’un nouveau <code>data frame</code>. R permet de remonter les changements donc cet écrasement n’empêche pas la vérification des processus, étape par étape.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="préparation-des-données.html#cb8-1"></a><span class="co">#Recondage des variables au score inversé</span></span>
-<span id="cb8-2"><a href="préparation-des-données.html#cb8-2"></a></span>
-<span id="cb8-3"><a href="préparation-des-données.html#cb8-3"></a>d_long &lt;-<span class="st"> </span>d_long <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb8-4"><a href="préparation-des-données.html#cb8-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">hbs20__7 =</span> <span class="dv">6</span> <span class="op">-</span><span class="st"> </span>hbs20__<span class="dv">7</span>,</span>
-<span id="cb8-5"><a href="préparation-des-données.html#cb8-5"></a>         <span class="dt">pec5__5 =</span> <span class="dv">6</span> <span class="op">-</span><span class="st"> </span>pec5__<span class="dv">5</span>,</span>
-<span id="cb8-6"><a href="préparation-des-données.html#cb8-6"></a>         <span class="dt">be8__4 =</span> <span class="dv">8</span> <span class="op">-</span><span class="st"> </span>be8__<span class="dv">4</span>,</span>
-<span id="cb8-7"><a href="préparation-des-données.html#cb8-7"></a>         <span class="dt">be8__5 =</span> <span class="dv">8</span> <span class="op">-</span><span class="st"> </span>be8__<span class="dv">5</span>,</span>
-<span id="cb8-8"><a href="préparation-des-données.html#cb8-8"></a>         <span class="dt">be8__8 =</span> <span class="dv">8</span> <span class="op">-</span><span class="st"> </span>be8__<span class="dv">8</span>,</span>
-<span id="cb8-9"><a href="préparation-des-données.html#cb8-9"></a>         <span class="dt">est10__3 =</span> <span class="dv">5</span> <span class="op">-</span><span class="st"> </span>est10__<span class="dv">3</span>,</span>
-<span id="cb8-10"><a href="préparation-des-données.html#cb8-10"></a>         <span class="dt">est10__5 =</span> <span class="dv">5</span> <span class="op">-</span><span class="st"> </span>est10__<span class="dv">5</span>,</span>
-<span id="cb8-11"><a href="préparation-des-données.html#cb8-11"></a>         <span class="dt">est10__7 =</span> <span class="dv">5</span> <span class="op">-</span><span class="st"> </span>est10__<span class="dv">7</span>,</span>
-<span id="cb8-12"><a href="préparation-des-données.html#cb8-12"></a>         <span class="dt">est10__10 =</span> <span class="dv">5</span> <span class="op">-</span><span class="st"> </span>est10__<span class="dv">10</span>,</span>
-<span id="cb8-13"><a href="préparation-des-données.html#cb8-13"></a>         <span class="dt">sou13__6 =</span> <span class="dv">6</span> <span class="op">-</span><span class="st"> </span>sou13__<span class="dv">6</span>,</span>
-<span id="cb8-14"><a href="préparation-des-données.html#cb8-14"></a>         <span class="dt">sou13__9 =</span> <span class="dv">6</span> <span class="op">-</span><span class="st"> </span>sou13__<span class="dv">9</span>,</span>
-<span id="cb8-15"><a href="préparation-des-données.html#cb8-15"></a>         <span class="dt">mot16__4 =</span> <span class="dv">8</span> <span class="op">-</span><span class="st"> </span>mot16__<span class="dv">4</span>,</span>
-<span id="cb8-16"><a href="préparation-des-données.html#cb8-16"></a>         <span class="dt">mot16__8 =</span> <span class="dv">8</span> <span class="op">-</span><span class="st"> </span>mot16__<span class="dv">8</span>,</span>
-<span id="cb8-17"><a href="préparation-des-données.html#cb8-17"></a>         <span class="dt">mot16__12 =</span> <span class="dv">8</span> <span class="op">-</span><span class="st"> </span>mot16__<span class="dv">12</span>,</span>
-<span id="cb8-18"><a href="préparation-des-données.html#cb8-18"></a>         <span class="dt">mot16__15 =</span> <span class="dv">8</span> <span class="op">-</span><span class="st"> </span>mot16__<span class="dv">15</span>,</span>
-<span id="cb8-19"><a href="préparation-des-données.html#cb8-19"></a>         <span class="dt">mot16__16 =</span> <span class="dv">8</span> <span class="op">-</span><span class="st"> </span>mot16__<span class="dv">16</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="préparation-des-données.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Recondage des variables au score inversé</span></span>
+<span id="cb8-2"><a href="préparation-des-données.html#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="préparation-des-données.html#cb8-3" aria-hidden="true" tabindex="-1"></a>d_long <span class="ot">&lt;-</span> d_long <span class="sc">%&gt;%</span> </span>
+<span id="cb8-4"><a href="préparation-des-données.html#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">hbs20__7 =</span> <span class="dv">6</span> <span class="sc">-</span> hbs20__7,</span>
+<span id="cb8-5"><a href="préparation-des-données.html#cb8-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">pec5__5 =</span> <span class="dv">6</span> <span class="sc">-</span> pec5__5,</span>
+<span id="cb8-6"><a href="préparation-des-données.html#cb8-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">be8__4 =</span> <span class="dv">8</span> <span class="sc">-</span> be8__4,</span>
+<span id="cb8-7"><a href="préparation-des-données.html#cb8-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">be8__5 =</span> <span class="dv">8</span> <span class="sc">-</span> be8__5,</span>
+<span id="cb8-8"><a href="préparation-des-données.html#cb8-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">be8__8 =</span> <span class="dv">8</span> <span class="sc">-</span> be8__8,</span>
+<span id="cb8-9"><a href="préparation-des-données.html#cb8-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">est10__3 =</span> <span class="dv">5</span> <span class="sc">-</span> est10__3,</span>
+<span id="cb8-10"><a href="préparation-des-données.html#cb8-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">est10__5 =</span> <span class="dv">5</span> <span class="sc">-</span> est10__5,</span>
+<span id="cb8-11"><a href="préparation-des-données.html#cb8-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">est10__7 =</span> <span class="dv">5</span> <span class="sc">-</span> est10__7,</span>
+<span id="cb8-12"><a href="préparation-des-données.html#cb8-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">est10__10 =</span> <span class="dv">5</span> <span class="sc">-</span> est10__10,</span>
+<span id="cb8-13"><a href="préparation-des-données.html#cb8-13" aria-hidden="true" tabindex="-1"></a>         <span class="at">sou13__6 =</span> <span class="dv">6</span> <span class="sc">-</span> sou13__6,</span>
+<span id="cb8-14"><a href="préparation-des-données.html#cb8-14" aria-hidden="true" tabindex="-1"></a>         <span class="at">sou13__9 =</span> <span class="dv">6</span> <span class="sc">-</span> sou13__9,</span>
+<span id="cb8-15"><a href="préparation-des-données.html#cb8-15" aria-hidden="true" tabindex="-1"></a>         <span class="at">mot16__4 =</span> <span class="dv">8</span> <span class="sc">-</span> mot16__4,</span>
+<span id="cb8-16"><a href="préparation-des-données.html#cb8-16" aria-hidden="true" tabindex="-1"></a>         <span class="at">mot16__8 =</span> <span class="dv">8</span> <span class="sc">-</span> mot16__8,</span>
+<span id="cb8-17"><a href="préparation-des-données.html#cb8-17" aria-hidden="true" tabindex="-1"></a>         <span class="at">mot16__12 =</span> <span class="dv">8</span> <span class="sc">-</span> mot16__12,</span>
+<span id="cb8-18"><a href="préparation-des-données.html#cb8-18" aria-hidden="true" tabindex="-1"></a>         <span class="at">mot16__15 =</span> <span class="dv">8</span> <span class="sc">-</span> mot16__15,</span>
+<span id="cb8-19"><a href="préparation-des-données.html#cb8-19" aria-hidden="true" tabindex="-1"></a>         <span class="at">mot16__16 =</span> <span class="dv">8</span> <span class="sc">-</span> mot16__16)</span></code></pre></div>
 <blockquote>
 <p>Le code paraît fastidieux et potentiellement source d’erreurs. De plus, ce recodage s’accompagne d’une feuille annexe sur laquelle on a noté avec prudence les items en cause et la formule pour inverser les scores… On ne sait mieux faire…</p>
 </blockquote>
 <p>Ce procédé d’écrasement facilite l’analyse de la cohérence interne ou le calcul des scores par la suite (cf. chapitre <em>description</em>).</p>
 </div>
-<div id="calcul-du-score-de-chaque-questionnaire-par-observation" class="section level3">
+<div id="calcul-du-score-de-chaque-questionnaire-par-observation" class="section level3" number="3.2.5">
 <h3><span class="header-section-number">3.2.5</span> calcul du score de chaque questionnaire par observation</h3>
 <p>La variable qui contient le score global de chaque questionnaire par participant·e porte l’extension *_sco* :</p>
 <blockquote>
 <p>Exemple : <code>mot13_sco</code> est la variable de score total de <code>mot13_1</code> à <code>mot13_13</code> avec les variables qui ont été inversées (sans conservation dans le df de l’item non-inversé).</p>
 </blockquote>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="préparation-des-données.html#cb9-1"></a><span class="co">#Recondage des variables au score inversé</span></span>
-<span id="cb9-2"><a href="préparation-des-données.html#cb9-2"></a></span>
-<span id="cb9-3"><a href="préparation-des-données.html#cb9-3"></a><span class="co">#Création des moyennes de chaque questionnaire pour chaque observation</span></span>
-<span id="cb9-4"><a href="préparation-des-données.html#cb9-4"></a></span>
-<span id="cb9-5"><a href="préparation-des-données.html#cb9-5"></a>d_long &lt;-<span class="st"> </span>d_long <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb9-6"><a href="préparation-des-données.html#cb9-6"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">hbs_sco =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;hbs&quot;</span>)),<span class="dt">na.rm =</span>T),</span>
-<span id="cb9-7"><a href="préparation-des-données.html#cb9-7"></a>         <span class="dt">pec_sco =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;pec&quot;</span>)),<span class="dt">na.rm =</span>T),</span>
-<span id="cb9-8"><a href="préparation-des-données.html#cb9-8"></a>         <span class="dt">be_sco  =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;be&quot;</span>)) ,<span class="dt">na.rm =</span>T),</span>
-<span id="cb9-9"><a href="préparation-des-données.html#cb9-9"></a>         <span class="dt">est_sco =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;est&quot;</span>)),<span class="dt">na.rm =</span>T),</span>
-<span id="cb9-10"><a href="préparation-des-données.html#cb9-10"></a>         <span class="dt">cli_sco =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;cli&quot;</span>)),<span class="dt">na.rm =</span>T),</span>
-<span id="cb9-11"><a href="préparation-des-données.html#cb9-11"></a>         <span class="dt">sou_sco =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;sou&quot;</span>)),<span class="dt">na.rm =</span>T),</span>
-<span id="cb9-12"><a href="préparation-des-données.html#cb9-12"></a>         <span class="dt">mot_sco =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;hbs&quot;</span>)),<span class="dt">na.rm =</span>T))</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="préparation-des-données.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Recondage des variables au score inversé</span></span>
+<span id="cb9-2"><a href="préparation-des-données.html#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="préparation-des-données.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Création des moyennes de chaque questionnaire pour chaque observation</span></span>
+<span id="cb9-4"><a href="préparation-des-données.html#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="préparation-des-données.html#cb9-5" aria-hidden="true" tabindex="-1"></a>d_long <span class="ot">&lt;-</span> d_long <span class="sc">%&gt;%</span> </span>
+<span id="cb9-6"><a href="préparation-des-données.html#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">hbs_sco =</span> <span class="fu">rowMeans</span>(<span class="fu">select</span>(.,<span class="fu">starts_with</span>(<span class="st">&quot;hbs&quot;</span>)),<span class="at">na.rm =</span>T),</span>
+<span id="cb9-7"><a href="préparation-des-données.html#cb9-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">pec_sco =</span> <span class="fu">rowMeans</span>(<span class="fu">select</span>(.,<span class="fu">starts_with</span>(<span class="st">&quot;pec&quot;</span>)),<span class="at">na.rm =</span>T),</span>
+<span id="cb9-8"><a href="préparation-des-données.html#cb9-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">be_sco  =</span> <span class="fu">rowMeans</span>(<span class="fu">select</span>(.,<span class="fu">starts_with</span>(<span class="st">&quot;be&quot;</span>)) ,<span class="at">na.rm =</span>T),</span>
+<span id="cb9-9"><a href="préparation-des-données.html#cb9-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">est_sco =</span> <span class="fu">rowMeans</span>(<span class="fu">select</span>(.,<span class="fu">starts_with</span>(<span class="st">&quot;est&quot;</span>)),<span class="at">na.rm =</span>T),</span>
+<span id="cb9-10"><a href="préparation-des-données.html#cb9-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">cli_sco =</span> <span class="fu">rowMeans</span>(<span class="fu">select</span>(.,<span class="fu">starts_with</span>(<span class="st">&quot;cli&quot;</span>)),<span class="at">na.rm =</span>T),</span>
+<span id="cb9-11"><a href="préparation-des-données.html#cb9-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">sou_sco =</span> <span class="fu">rowMeans</span>(<span class="fu">select</span>(.,<span class="fu">starts_with</span>(<span class="st">&quot;sou&quot;</span>)),<span class="at">na.rm =</span>T),</span>
+<span id="cb9-12"><a href="préparation-des-données.html#cb9-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">mot_sco =</span> <span class="fu">rowMeans</span>(<span class="fu">select</span>(.,<span class="fu">starts_with</span>(<span class="st">&quot;hbs&quot;</span>)),<span class="at">na.rm =</span>T))</span></code></pre></div>
 <blockquote>
 <p>De nouveau, on ne crée pas d’objet intermédiaire sachant que R sait très bien nous permettre de vérifier le processus, étape par étape.</p>
 </blockquote>
@@ -325,7 +328,7 @@ On relève toutefois une faiblesse : le code n’est pas 100% anonyme et on peut
 <p>On apprécie, même si on ne comprend pas encore à satisfaction la fonction ´select´et son fonctionnement.</p>
 </blockquote>
 </div>
-<div id="filtrage-des-observations" class="section level3">
+<div id="filtrage-des-observations" class="section level3" number="3.2.6">
 <h3><span class="header-section-number">3.2.6</span> filtrage des observations</h3>
 <p>Ici, on a essayé de développer une technique pour ne garder que les <em>id</em> qui se retrouvent strictement au temps 1 et au temps 2.</p>
 <p>Les enjeux sont cruciaux :</p>
@@ -338,40 +341,40 @@ On relève toutefois une faiblesse : le code n’est pas 100% anonyme et on peut
 <ul>
 <li>créé un df de comparaison pour pouvoir dire à R quoi sélectionner. Ce df va, en deux étapes, ne garder que (1) les <em>id</em> uniques dans chaque temps puis (2) constituant une paire (t1, t2).</li>
 </ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="préparation-des-données.html#cb10-1"></a>d_comp &lt;-<span class="st"> </span>d_long <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb10-2"><a href="préparation-des-données.html#cb10-2"></a><span class="st">  </span><span class="kw">drop_na</span>(id) <span class="op">%&gt;%</span><span class="st"> </span><span class="co">#par sécurité, on supprime les lignes dont l&#39;id est vide</span></span>
-<span id="cb10-3"><a href="préparation-des-données.html#cb10-3"></a><span class="st">  </span><span class="kw">arrange</span>(id) <span class="op">%&gt;%</span><span class="st"> </span><span class="co">#visuel uniquement</span></span>
-<span id="cb10-4"><a href="préparation-des-données.html#cb10-4"></a><span class="st">  </span><span class="kw">group_by</span>(id, temps) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb10-5"><a href="préparation-des-données.html#cb10-5"></a><span class="st">  </span><span class="kw">count</span>(id) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb10-6"><a href="préparation-des-données.html#cb10-6"></a><span class="st">  </span><span class="kw">filter</span>(n<span class="op">==</span><span class="dv">1</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co">#On s&#39;est assuré que chaque id est unique dans chaque modalité de temps. On doit encore être sûrs qu&#39;on a maintenant exactement une paire (t1,t2). Donc on continue le processus que R réalise dans cet ordre.</span></span>
-<span id="cb10-7"><a href="préparation-des-données.html#cb10-7"></a><span class="st">  </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb10-8"><a href="préparation-des-données.html#cb10-8"></a><span class="st">  </span><span class="kw">group_by</span>(id) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb10-9"><a href="préparation-des-données.html#cb10-9"></a><span class="st">  </span><span class="kw">count</span>(id) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb10-10"><a href="préparation-des-données.html#cb10-10"></a><span class="st">  </span><span class="kw">filter</span>(n<span class="op">==</span><span class="dv">2</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co">#on ne garde que les paires de id qui se retrouvent dans t1 et t2. C&#39;est notre grosse perte de données de ce traitement</span></span>
-<span id="cb10-11"><a href="préparation-des-données.html#cb10-11"></a><span class="st">  </span><span class="kw">ungroup</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="préparation-des-données.html#cb10-1" aria-hidden="true" tabindex="-1"></a>d_comp <span class="ot">&lt;-</span> d_long <span class="sc">%&gt;%</span> </span>
+<span id="cb10-2"><a href="préparation-des-données.html#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(id) <span class="sc">%&gt;%</span> <span class="co">#par sécurité, on supprime les lignes dont l&#39;id est vide</span></span>
+<span id="cb10-3"><a href="préparation-des-données.html#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(id) <span class="sc">%&gt;%</span> <span class="co">#visuel uniquement</span></span>
+<span id="cb10-4"><a href="préparation-des-données.html#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(id, temps) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-5"><a href="préparation-des-données.html#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(id) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-6"><a href="préparation-des-données.html#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n<span class="sc">==</span><span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="co">#On s&#39;est assuré que chaque id est unique dans chaque modalité de temps. On doit encore être sûrs qu&#39;on a maintenant exactement une paire (t1,t2). Donc on continue le processus que R réalise dans cet ordre.</span></span>
+<span id="cb10-7"><a href="préparation-des-données.html#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb10-8"><a href="préparation-des-données.html#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(id) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-9"><a href="préparation-des-données.html#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(id) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-10"><a href="préparation-des-données.html#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n<span class="sc">==</span><span class="dv">2</span>) <span class="sc">%&gt;%</span> <span class="co">#on ne garde que les paires de id qui se retrouvent dans t1 et t2. C&#39;est notre grosse perte de données de ce traitement</span></span>
+<span id="cb10-11"><a href="préparation-des-données.html#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div>
 <blockquote>
 <p>On devrait vérifier la validité de cette méthode, sur le plan des bonnes pratiques stat, et aussi sur le plan du codage dans R…et aussi s’assurer qu’elle fonctionne bien comme on le pense en la mettant à l’épreuve.</p>
 </blockquote>
 <ul>
 <li>créé un nouveau df qui ne contient plus que les paires souhaitées</li>
 </ul>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="préparation-des-données.html#cb11-1"></a><span class="co">#Notre df de comparaison est prêt. On peut procéder à l&#39;élagage de d_long.</span></span>
-<span id="cb11-2"><a href="préparation-des-données.html#cb11-2"></a></span>
-<span id="cb11-3"><a href="préparation-des-données.html#cb11-3"></a>d_long_paired &lt;-<span class="st"> </span>d_long <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb11-4"><a href="préparation-des-données.html#cb11-4"></a><span class="st">  </span><span class="kw">filter</span>(id <span class="op">%in%</span><span class="st"> </span>d_comp<span class="op">$</span>id) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb11-5"><a href="préparation-des-données.html#cb11-5"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">group=</span><span class="kw">ifelse</span>(group<span class="op">==</span><span class="st">&quot;con&quot;</span>, <span class="st">&quot;contrôle&quot;</span>,<span class="st">&quot;expérimental&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="préparation-des-données.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Notre df de comparaison est prêt. On peut procéder à l&#39;élagage de d_long.</span></span>
+<span id="cb11-2"><a href="préparation-des-données.html#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="préparation-des-données.html#cb11-3" aria-hidden="true" tabindex="-1"></a>d_long_paired <span class="ot">&lt;-</span> d_long <span class="sc">%&gt;%</span> </span>
+<span id="cb11-4"><a href="préparation-des-données.html#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(id <span class="sc">%in%</span> d_comp<span class="sc">$</span>id) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-5"><a href="préparation-des-données.html#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">group=</span><span class="fu">ifelse</span>(group<span class="sc">==</span><span class="st">&quot;con&quot;</span>, <span class="st">&quot;contrôle&quot;</span>,<span class="st">&quot;expérimental&quot;</span>))</span></code></pre></div>
 <blockquote>
 <p>On a été un peu sauvé avec le logique <code>%in%</code> mais sans bien savoir pourquoi <code>==</code> ne convient pas.
 Dans l’example, on en a profité pour modifier les facteurs de la variable <code>group</code>. Les forums ne sont pas clairs sur la différence entre <code>ifelse</code>et <code>if_else</code>ou encore <code>case_when</code>. On doit clarifier cela.</p>
 </blockquote>
 </div>
-<div id="gestion-des-données-manquantes" class="section level3">
+<div id="gestion-des-données-manquantes" class="section level3" number="3.2.7">
 <h3><span class="header-section-number">3.2.7</span> gestion des données manquantes</h3>
 <blockquote>
 <p>pas encore de bonnes pratiques.</p>
 </blockquote>
 </div>
-<div id="gestion-des-données-extrêmes" class="section level3">
+<div id="gestion-des-données-extrêmes" class="section level3" number="3.2.8">
 <h3><span class="header-section-number">3.2.8</span> gestion des données extrêmes</h3>
 <blockquote>
 <p>pas encore de bonnes pratiques.</p>

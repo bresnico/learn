@@ -32,6 +32,7 @@
   
 <link rel="prev" href="préparation-des-données.html"/>
 <link rel="next" href="rapport.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -49,24 +50,21 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -86,7 +84,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -132,16 +130,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Préambule</a></li>
-<li class="chapter" data-level="2" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html"><i class="fa fa-check"></i><b>2</b> Environnement de travail</a><ul>
+<li class="chapter" data-level="2" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html"><i class="fa fa-check"></i><b>2</b> Environnement de travail</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#github-et-structure-des-dossiers"><i class="fa fa-check"></i><b>2.1</b> GitHub et structure des dossiers</a></li>
 <li class="chapter" data-level="2.2" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#rédaction-du-code-et-grammaire"><i class="fa fa-check"></i><b>2.2</b> Rédaction du code et grammaire</a></li>
 <li class="chapter" data-level="2.3" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#rstudio-et-packages"><i class="fa fa-check"></i><b>2.3</b> RStudio et packages</a></li>
 <li class="chapter" data-level="2.4" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#sublime-text-et-packages"><i class="fa fa-check"></i><b>2.4</b> Sublime Text et Packages</a></li>
 <li class="chapter" data-level="2.5" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#scrivener-3-zotero-betterbibtext---rédaction-darticles-longs"><i class="fa fa-check"></i><b>2.5</b> Scrivener 3 + Zotero + BetterBibText - Rédaction d’articles longs</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="préparation-des-données.html"><a href="préparation-des-données.html"><i class="fa fa-check"></i><b>3</b> Préparation des données</a><ul>
+<li class="chapter" data-level="3" data-path="préparation-des-données.html"><a href="préparation-des-données.html"><i class="fa fa-check"></i><b>3</b> Préparation des données</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="préparation-des-données.html"><a href="préparation-des-données.html#bonnes-pratiques-dans-le-système-de-récolte-des-données-qualtrics"><i class="fa fa-check"></i><b>3.1</b> Bonnes pratiques dans le système de récolte des données (Qualtrics, …)</a></li>
-<li class="chapter" data-level="3.2" data-path="préparation-des-données.html"><a href="préparation-des-données.html#premières-étapes-dans-r-en-principe-les-noms-des-variables-sont-sains"><i class="fa fa-check"></i><b>3.2</b> Premières étapes dans R (en principe, les noms des variables sont sains)</a><ul>
+<li class="chapter" data-level="3.2" data-path="préparation-des-données.html"><a href="préparation-des-données.html#premières-étapes-dans-r-en-principe-les-noms-des-variables-sont-sains"><i class="fa fa-check"></i><b>3.2</b> Premières étapes dans R (en principe, les noms des variables sont sains)</a>
+<ul>
 <li class="chapter" data-level="3.2.1" data-path="préparation-des-données.html"><a href="préparation-des-données.html#ajout-de-la-variable-de-temps-dans-chaque-df-cas-simple"><i class="fa fa-check"></i><b>3.2.1</b> ajout de la variable de temps dans chaque df (cas simple)</a></li>
 <li class="chapter" data-level="3.2.2" data-path="préparation-des-données.html"><a href="préparation-des-données.html#catégorisation-de-la-variable-de-temps-cas-avec-horodatage-préalable"><i class="fa fa-check"></i><b>3.2.2</b> catégorisation de la variable de temps (cas avec horodatage préalable)</a></li>
 <li class="chapter" data-level="3.2.3" data-path="préparation-des-données.html"><a href="préparation-des-données.html#création-dun-data-frame-unique"><i class="fa fa-check"></i><b>3.2.3</b> création d’un data frame unique</a></li>
@@ -152,7 +153,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2.8" data-path="préparation-des-données.html"><a href="préparation-des-données.html#gestion-des-données-extrêmes"><i class="fa fa-check"></i><b>3.2.8</b> gestion des données extrêmes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="description-des-données.html"><a href="description-des-données.html"><i class="fa fa-check"></i><b>4</b> Description des données</a><ul>
+<li class="chapter" data-level="4" data-path="description-des-données.html"><a href="description-des-données.html"><i class="fa fa-check"></i><b>4</b> Description des données</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="description-des-données.html"><a href="description-des-données.html#obtenir-une-synthèse-de-données"><i class="fa fa-check"></i><b>4.1</b> Obtenir une synthèse de données</a></li>
 <li class="chapter" data-level="4.2" data-path="description-des-données.html"><a href="description-des-données.html#principes"><i class="fa fa-check"></i><b>4.2</b> Principes</a></li>
 <li class="chapter" data-level="4.3" data-path="description-des-données.html"><a href="description-des-données.html#procédures"><i class="fa fa-check"></i><b>4.3</b> Procédures</a></li>
@@ -160,7 +162,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.5" data-path="description-des-données.html"><a href="description-des-données.html#tableaux"><i class="fa fa-check"></i><b>4.5</b> Tableaux</a></li>
 <li class="chapter" data-level="4.6" data-path="description-des-données.html"><a href="description-des-données.html#plots"><i class="fa fa-check"></i><b>4.6</b> Plots</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="rapport.html"><a href="rapport.html"><i class="fa fa-check"></i><b>5</b> Rapport</a><ul>
+<li class="chapter" data-level="5" data-path="rapport.html"><a href="rapport.html"><i class="fa fa-check"></i><b>5</b> Rapport</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="rapport.html"><a href="rapport.html#principes-1"><i class="fa fa-check"></i><b>5.1</b> Principes</a></li>
 <li class="chapter" data-level="5.2" data-path="rapport.html"><a href="rapport.html#procédures-clés"><i class="fa fa-check"></i><b>5.2</b> Procédures clés</a></li>
 <li class="chapter" data-level="5.3" data-path="rapport.html"><a href="rapport.html#un-mot-sur-les-normes-apa"><i class="fa fa-check"></i><b>5.3</b> Un mot sur les normes APA</a></li>
@@ -183,88 +186,102 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="description-des-données" class="section level1">
+<div id="description-des-données" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Description des données</h1>
-<div id="obtenir-une-synthèse-de-données" class="section level2">
+<div id="obtenir-une-synthèse-de-données" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Obtenir une synthèse de données</h2>
 <p>Voici deux exemples pour obtenir des petits résumés.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="description-des-données.html#cb12-1"></a>d_long_paired_sum &lt;-<span class="st"> </span>d_long_paired <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb12-2"><a href="description-des-données.html#cb12-2"></a><span class="st">   </span><span class="kw">mutate</span>(<span class="dt">sex=</span><span class="kw">ifelse</span>(sex<span class="op">==</span><span class="st">&quot;1&quot;</span>, <span class="st">&quot;garçons&quot;</span>,<span class="st">&quot;filles&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb12-3"><a href="description-des-données.html#cb12-3"></a><span class="st">   </span><span class="kw">group_by</span>(temps, group, sex) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb12-4"><a href="description-des-données.html#cb12-4"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n=</span><span class="kw">n</span>())</span>
-<span id="cb12-5"><a href="description-des-données.html#cb12-5"></a></span>
-<span id="cb12-6"><a href="description-des-données.html#cb12-6"></a>d_long_paired_sum2 &lt;-<span class="st"> </span>d_long_paired <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb12-7"><a href="description-des-données.html#cb12-7"></a><span class="st">  </span><span class="kw">group_by</span>(temps, group) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb12-8"><a href="description-des-données.html#cb12-8"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n=</span><span class="kw">n</span>(),</span>
-<span id="cb12-9"><a href="description-des-données.html#cb12-9"></a>            <span class="dt">mean_hbs=</span><span class="kw">mean</span>(hbs_sco),</span>
-<span id="cb12-10"><a href="description-des-données.html#cb12-10"></a>            <span class="dt">mean_pec=</span><span class="kw">mean</span>(pec_sco),</span>
-<span id="cb12-11"><a href="description-des-données.html#cb12-11"></a>            <span class="dt">mean_be=</span><span class="kw">mean</span>(be_sco),</span>
-<span id="cb12-12"><a href="description-des-données.html#cb12-12"></a>            <span class="dt">mean_est=</span><span class="kw">mean</span>(est_sco),</span>
-<span id="cb12-13"><a href="description-des-données.html#cb12-13"></a>            <span class="dt">mean_cli=</span><span class="kw">mean</span>(cli_sco),</span>
-<span id="cb12-14"><a href="description-des-données.html#cb12-14"></a>            <span class="dt">mean_sou=</span><span class="kw">mean</span>(sou_sco),</span>
-<span id="cb12-15"><a href="description-des-données.html#cb12-15"></a>            <span class="dt">mean_mot=</span><span class="kw">mean</span>(mot_sco),</span>
-<span id="cb12-16"><a href="description-des-données.html#cb12-16"></a>            <span class="dt">mean_sho1=</span><span class="kw">mean</span>(sho_<span class="dv">1</span>),</span>
-<span id="cb12-17"><a href="description-des-données.html#cb12-17"></a>            <span class="dt">mean_sho2=</span><span class="kw">mean</span>(sho_<span class="dv">2</span>),</span>
-<span id="cb12-18"><a href="description-des-données.html#cb12-18"></a>            <span class="dt">mean_sho3=</span><span class="kw">mean</span>(sho_<span class="dv">3</span>),</span>
-<span id="cb12-19"><a href="description-des-données.html#cb12-19"></a>            <span class="dt">mean_sho4=</span><span class="kw">mean</span>(sho_<span class="dv">4</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="description-des-données.html#cb12-1" aria-hidden="true" tabindex="-1"></a>d_long_paired_sum <span class="ot">&lt;-</span> d_long_paired <span class="sc">%&gt;%</span> </span>
+<span id="cb12-2"><a href="description-des-données.html#cb12-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">mutate</span>(<span class="at">sex=</span><span class="fu">ifelse</span>(sex<span class="sc">==</span><span class="st">&quot;1&quot;</span>, <span class="st">&quot;garçons&quot;</span>,<span class="st">&quot;filles&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-3"><a href="description-des-données.html#cb12-3" aria-hidden="true" tabindex="-1"></a>   <span class="fu">group_by</span>(temps, group, sex) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-4"><a href="description-des-données.html#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n=</span><span class="fu">n</span>())</span>
+<span id="cb12-5"><a href="description-des-données.html#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="description-des-données.html#cb12-6" aria-hidden="true" tabindex="-1"></a>d_long_paired_sum2 <span class="ot">&lt;-</span> d_long_paired <span class="sc">%&gt;%</span> </span>
+<span id="cb12-7"><a href="description-des-données.html#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(temps, group) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-8"><a href="description-des-données.html#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n=</span><span class="fu">n</span>(),</span>
+<span id="cb12-9"><a href="description-des-données.html#cb12-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_hbs=</span><span class="fu">mean</span>(hbs_sco),</span>
+<span id="cb12-10"><a href="description-des-données.html#cb12-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_pec=</span><span class="fu">mean</span>(pec_sco),</span>
+<span id="cb12-11"><a href="description-des-données.html#cb12-11" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_be=</span><span class="fu">mean</span>(be_sco),</span>
+<span id="cb12-12"><a href="description-des-données.html#cb12-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_est=</span><span class="fu">mean</span>(est_sco),</span>
+<span id="cb12-13"><a href="description-des-données.html#cb12-13" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_cli=</span><span class="fu">mean</span>(cli_sco),</span>
+<span id="cb12-14"><a href="description-des-données.html#cb12-14" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_sou=</span><span class="fu">mean</span>(sou_sco),</span>
+<span id="cb12-15"><a href="description-des-données.html#cb12-15" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_mot=</span><span class="fu">mean</span>(mot_sco),</span>
+<span id="cb12-16"><a href="description-des-données.html#cb12-16" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_sho1=</span><span class="fu">mean</span>(sho_1),</span>
+<span id="cb12-17"><a href="description-des-données.html#cb12-17" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_sho2=</span><span class="fu">mean</span>(sho_2),</span>
+<span id="cb12-18"><a href="description-des-données.html#cb12-18" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_sho3=</span><span class="fu">mean</span>(sho_3),</span>
+<span id="cb12-19"><a href="description-des-données.html#cb12-19" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_sho4=</span><span class="fu">mean</span>(sho_4))</span></code></pre></div>
 </div>
-<div id="principes" class="section level2">
+<div id="principes" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Principes</h2>
 </div>
-<div id="procédures" class="section level2">
+<div id="procédures" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> Procédures</h2>
 </div>
-<div id="le-cas-des-boucles" class="section level2">
+<div id="le-cas-des-boucles" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> Le cas des boucles</h2>
-<p>La fonction <code>for</code> semble très utile pour faire faire des boucles. Quand je dois réaliser 10 plots de 10 VI, je peux juste préparer mon plot et l’intégrer dans une boucle. La contrainte semble être liée à <code>aes</code> et peut-être aussi au titre du plot dont on aimerait aussi “automatiser” la génération.</p>
+<p>La fonction <code>for</code> semble très utile pour faire faire des boucles.
+Quand je dois réaliser 10 plots de 10 VI, je peux juste préparer mon plot et l’intégrer dans une boucle.
+La contrainte semble être liée à <code>aes</code> et peut-être aussi au titre du plot dont on aimerait aussi “automatiser” la génération.</p>
 <p>Infos à comprendre et tester ici : <a href="https://statistique-et-logiciel-r.com/comment-utiliser-ggplot-dans-une-boucle-ou-dans-une-fonction/" class="uri">https://statistique-et-logiciel-r.com/comment-utiliser-ggplot-dans-une-boucle-ou-dans-une-fonction/</a></p>
 <p>intégrer et expliquer le cas d’école réussi avec les données IBE:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="description-des-données.html#cb13-1"></a><span class="co">#######################</span></span>
-<span id="cb13-2"><a href="description-des-données.html#cb13-2"></a><span class="co">#visualisation en loop#</span></span>
-<span id="cb13-3"><a href="description-des-données.html#cb13-3"></a><span class="co">#######################</span></span>
-<span id="cb13-4"><a href="description-des-données.html#cb13-4"></a><span class="co"># Liste des noms des variables que l&#39;on veut (a à p uniquement).</span></span>
-<span id="cb13-5"><a href="description-des-données.html#cb13-5"></a>var_list =<span class="st"> </span><span class="kw">names</span>(d_paired)[<span class="dv">6</span><span class="op">:</span><span class="dv">21</span>]</span>
-<span id="cb13-6"><a href="description-des-données.html#cb13-6"></a></span>
-<span id="cb13-7"><a href="description-des-données.html#cb13-7"></a><span class="co"># création de la liste pour accueillir les 16 (21-5) plots</span></span>
-<span id="cb13-8"><a href="description-des-données.html#cb13-8"></a>plot_list =<span class="st"> </span><span class="kw">list</span>()</span>
-<span id="cb13-9"><a href="description-des-données.html#cb13-9"></a></span>
-<span id="cb13-10"><a href="description-des-données.html#cb13-10"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">16</span>) {</span>
-<span id="cb13-11"><a href="description-des-données.html#cb13-11"></a>  p &lt;-<span class="st"> </span>d_paired <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb13-12"><a href="description-des-données.html#cb13-12"></a><span class="st">    </span><span class="kw">ggplot</span>() <span class="op">+</span></span>
-<span id="cb13-13"><a href="description-des-données.html#cb13-13"></a><span class="st">    </span><span class="kw">aes</span>(<span class="dt">x =</span> dat) <span class="op">+</span></span>
-<span id="cb13-14"><a href="description-des-données.html#cb13-14"></a><span class="st">    </span><span class="kw">aes_string</span>(<span class="dt">y =</span> var_list[i]) <span class="op">+</span></span>
-<span id="cb13-15"><a href="description-des-données.html#cb13-15"></a><span class="st">    </span><span class="kw">geom_jitter</span>(<span class="dt">size =</span> <span class="dv">5</span>, <span class="dt">alpha =</span> <span class="fl">.5</span>, <span class="dt">width =</span> <span class="fl">0.3</span>) <span class="op">+</span></span>
-<span id="cb13-16"><a href="description-des-données.html#cb13-16"></a><span class="st">    </span><span class="kw">stat_summary</span>(<span class="dt">fun =</span> mean, <span class="dt">geom =</span> <span class="st">&quot;point&quot;</span>, <span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">shape =</span> <span class="dv">4</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span></span>
-<span id="cb13-17"><a href="description-des-données.html#cb13-17"></a><span class="st">    </span><span class="kw">stat_summary</span>(<span class="dt">fun =</span> mean, <span class="dt">geom =</span> <span class="st">&quot;line&quot;</span>, <span class="kw">aes</span>(<span class="dt">group =</span> <span class="dv">1</span>), <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span></span>
-<span id="cb13-18"><a href="description-des-données.html#cb13-18"></a><span class="st">    </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="kw">paste</span>(<span class="st">&quot;Mesure item&quot;</span>,i), <span class="dt">y =</span> <span class="st">&quot;Score&quot;</span>) <span class="op">+</span></span>
-<span id="cb13-19"><a href="description-des-données.html#cb13-19"></a><span class="st">    </span><span class="kw">theme</span>(<span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">hjust =</span> <span class="fl">0.5</span>))  </span>
-<span id="cb13-20"><a href="description-des-données.html#cb13-20"></a>  plot_list[[i]] =<span class="st"> </span>p</span>
-<span id="cb13-21"><a href="description-des-données.html#cb13-21"></a>}</span>
-<span id="cb13-22"><a href="description-des-données.html#cb13-22"></a><span class="kw">dev.off</span>()</span>
-<span id="cb13-23"><a href="description-des-données.html#cb13-23"></a></span>
-<span id="cb13-24"><a href="description-des-données.html#cb13-24"></a><span class="co"># enregistrement des plots en png par fichier séparé avec un nom correspondant au nom de la variable et non de son numéro.</span></span>
-<span id="cb13-25"><a href="description-des-données.html#cb13-25"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">16</span>) {</span>
-<span id="cb13-26"><a href="description-des-données.html#cb13-26"></a>  temp_plot =<span class="st"> </span>plot_list[[i]]</span>
-<span id="cb13-27"><a href="description-des-données.html#cb13-27"></a>  <span class="kw">ggsave</span>(temp_plot, <span class="dt">file=</span><span class="kw">paste0</span>(<span class="st">&quot;plot_&quot;</span>, var_list[[i]],<span class="st">&quot;.png&quot;</span>), <span class="dt">width =</span> <span class="dv">14</span>, <span class="dt">height =</span> <span class="dv">10</span>, <span class="dt">units =</span> <span class="st">&quot;cm&quot;</span>)</span>
-<span id="cb13-28"><a href="description-des-données.html#cb13-28"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="description-des-données.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="do">#######################</span></span>
+<span id="cb13-2"><a href="description-des-données.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#visualisation en loop#</span></span>
+<span id="cb13-3"><a href="description-des-données.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="do">#######################</span></span>
+<span id="cb13-4"><a href="description-des-données.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Liste des noms des variables que l&#39;on veut (a à p uniquement).</span></span>
+<span id="cb13-5"><a href="description-des-données.html#cb13-5" aria-hidden="true" tabindex="-1"></a>var_list <span class="ot">=</span> <span class="fu">names</span>(d_paired)[<span class="dv">6</span><span class="sc">:</span><span class="dv">21</span>]</span>
+<span id="cb13-6"><a href="description-des-données.html#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="description-des-données.html#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># création de la liste pour accueillir les 16 (21-5) plots</span></span>
+<span id="cb13-8"><a href="description-des-données.html#cb13-8" aria-hidden="true" tabindex="-1"></a>plot_list <span class="ot">=</span> <span class="fu">list</span>()</span>
+<span id="cb13-9"><a href="description-des-données.html#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="description-des-données.html#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">16</span>) {</span>
+<span id="cb13-11"><a href="description-des-données.html#cb13-11" aria-hidden="true" tabindex="-1"></a>  p <span class="ot">&lt;-</span> d_paired <span class="sc">%&gt;%</span> </span>
+<span id="cb13-12"><a href="description-des-données.html#cb13-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb13-13"><a href="description-des-données.html#cb13-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> dat) <span class="sc">+</span></span>
+<span id="cb13-14"><a href="description-des-données.html#cb13-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes_string</span>(<span class="at">y =</span> var_list[i]) <span class="sc">+</span></span>
+<span id="cb13-15"><a href="description-des-données.html#cb13-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_jitter</span>(<span class="at">size =</span> <span class="dv">5</span>, <span class="at">alpha =</span> .<span class="dv">5</span>, <span class="at">width =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb13-16"><a href="description-des-données.html#cb13-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">&quot;point&quot;</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">shape =</span> <span class="dv">4</span>, <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb13-17"><a href="description-des-données.html#cb13-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">&quot;line&quot;</span>, <span class="fu">aes</span>(<span class="at">group =</span> <span class="dv">1</span>), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb13-18"><a href="description-des-données.html#cb13-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">paste</span>(<span class="st">&quot;Mesure item&quot;</span>,i), <span class="at">y =</span> <span class="st">&quot;Score&quot;</span>) <span class="sc">+</span></span>
+<span id="cb13-19"><a href="description-des-données.html#cb13-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))  </span>
+<span id="cb13-20"><a href="description-des-données.html#cb13-20" aria-hidden="true" tabindex="-1"></a>  plot_list[[i]] <span class="ot">=</span> p</span>
+<span id="cb13-21"><a href="description-des-données.html#cb13-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-22"><a href="description-des-données.html#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span>
+<span id="cb13-23"><a href="description-des-données.html#cb13-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-24"><a href="description-des-données.html#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="co"># enregistrement des plots en png par fichier séparé avec un nom correspondant au nom de la variable et non de son numéro.</span></span>
+<span id="cb13-25"><a href="description-des-données.html#cb13-25" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">16</span>) {</span>
+<span id="cb13-26"><a href="description-des-données.html#cb13-26" aria-hidden="true" tabindex="-1"></a>  temp_plot <span class="ot">=</span> plot_list[[i]]</span>
+<span id="cb13-27"><a href="description-des-données.html#cb13-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggsave</span>(temp_plot, <span class="at">file=</span><span class="fu">paste0</span>(<span class="st">&quot;plot_&quot;</span>, var_list[[i]],<span class="st">&quot;.png&quot;</span>), <span class="at">width =</span> <span class="dv">14</span>, <span class="at">height =</span> <span class="dv">10</span>, <span class="at">units =</span> <span class="st">&quot;cm&quot;</span>)</span>
+<span id="cb13-28"><a href="description-des-données.html#cb13-28" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </div>
-<div id="tableaux" class="section level2">
+<div id="tableaux" class="section level2" number="4.5">
 <h2><span class="header-section-number">4.5</span> Tableaux</h2>
 </div>
-<div id="plots" class="section level2">
+<div id="plots" class="section level2" number="4.6">
 <h2><span class="header-section-number">4.6</span> Plots</h2>
 <p>intégrer mes trouvailles de crips2019 et ce qu’un plot doit montrer.</p>
-<p>Travail avec Zoe. Notes à intégrer :</p>
+<p>Travail avec Zoe.
+Notes à intégrer :</p>
 <p>Réaliser des boxplots avec barres d’erreurs</p>
-<p>[ ] –&gt; plutôt utiliser select des variables ou filter des participants
-gather –&gt; 1er argument nom et 2ème argument valeur</p>
-<p>set.sid dans Rmarkdown pour figer les aléatoires, p.ex. le jitter pour pas que ça change à chaque lancement.</p>
+<p>[ ] –&gt; plutôt utiliser select des variables ou filter des participants gather –&gt; 1er argument nom et 2ème argument valeur</p>
+<p>set.sid dans Rmarkdown pour figer les aléatoires, p.ex.
+le jitter pour pas que ça change à chaque lancement.</p>
 <p>installer des kits de couleurs au besoin.</p>
 <p>shape : les numéros correspondent à des formes de points.</p>
-<p>geom_line : 3 arguments minimum. avec group.
+<p>geom_line : 3 arguments minimum.
+avec group.
 –&gt; pourquoi “group” et pourquoi “1”.
 Alt + N = ~</p>
 <p>jitter –&gt; position et positionjitterdodge pour comparer G et F</p>
+<p>Afficher toutes les catégries, même les vides :</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="description-des-données.html#cb14-1" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_discrete</span>(<span class="at">drop =</span> <span class="cn">FALSE</span>) <span class="co"># Forcer l&#39;affichage des catégories vides</span></span>
+<span id="cb14-2"><a href="description-des-données.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># A voir si la variable doit être un facteur</span></span>
+<span id="cb14-3"><a href="description-des-données.html#cb14-3" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> d <span class="sc">%&gt;%</span> </span>
+<span id="cb14-4"><a href="description-des-données.html#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb14-5"><a href="description-des-données.html#cb14-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">q1 =</span> <span class="fu">factor</span>(q1, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;1&quot;</span>,<span class="st">&quot;2&quot;</span>,<span class="st">&quot;3&quot;</span>,<span class="st">&quot;4&quot;</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;pas du tout&quot;</span>, <span class="st">&quot;plutôt non&quot;</span>, <span class="st">&quot;plutôt oui&quot;</span>, <span class="st">&quot;tout à fait&quot;</span>)),</span>
+<span id="cb14-6"><a href="description-des-données.html#cb14-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">q2 =</span> <span class="fu">factor</span>(q2, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;1&quot;</span>,<span class="st">&quot;2&quot;</span>,<span class="st">&quot;3&quot;</span>,<span class="st">&quot;4&quot;</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;pas du tout&quot;</span>, <span class="st">&quot;plutôt non&quot;</span>, <span class="st">&quot;plutôt oui&quot;</span>, <span class="st">&quot;tout à fait&quot;</span>)),</span>
+<span id="cb14-7"><a href="description-des-données.html#cb14-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">q3 =</span> <span class="fu">factor</span>(q3, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;1&quot;</span>,<span class="st">&quot;2&quot;</span>,<span class="st">&quot;3&quot;</span>,<span class="st">&quot;4&quot;</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;pas du tout&quot;</span>, <span class="st">&quot;plutôt non&quot;</span>, <span class="st">&quot;plutôt oui&quot;</span>, <span class="st">&quot;tout à fait&quot;</span>)),</span>
+<span id="cb14-8"><a href="description-des-données.html#cb14-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">q4 =</span> <span class="fu">factor</span>(q4, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;1&quot;</span>,<span class="st">&quot;2&quot;</span>,<span class="st">&quot;3&quot;</span>,<span class="st">&quot;4&quot;</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;pas du tout&quot;</span>, <span class="st">&quot;plutôt non&quot;</span>, <span class="st">&quot;plutôt oui&quot;</span>, <span class="st">&quot;tout à fait&quot;</span>)),</span>
+<span id="cb14-9"><a href="description-des-données.html#cb14-9" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
 
 </div>
 </div>

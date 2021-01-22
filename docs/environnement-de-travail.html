@@ -32,6 +32,7 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="préparation-des-données.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -49,24 +50,21 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -86,7 +84,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -132,16 +130,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Préambule</a></li>
-<li class="chapter" data-level="2" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html"><i class="fa fa-check"></i><b>2</b> Environnement de travail</a><ul>
+<li class="chapter" data-level="2" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html"><i class="fa fa-check"></i><b>2</b> Environnement de travail</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#github-et-structure-des-dossiers"><i class="fa fa-check"></i><b>2.1</b> GitHub et structure des dossiers</a></li>
 <li class="chapter" data-level="2.2" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#rédaction-du-code-et-grammaire"><i class="fa fa-check"></i><b>2.2</b> Rédaction du code et grammaire</a></li>
 <li class="chapter" data-level="2.3" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#rstudio-et-packages"><i class="fa fa-check"></i><b>2.3</b> RStudio et packages</a></li>
 <li class="chapter" data-level="2.4" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#sublime-text-et-packages"><i class="fa fa-check"></i><b>2.4</b> Sublime Text et Packages</a></li>
 <li class="chapter" data-level="2.5" data-path="environnement-de-travail.html"><a href="environnement-de-travail.html#scrivener-3-zotero-betterbibtext---rédaction-darticles-longs"><i class="fa fa-check"></i><b>2.5</b> Scrivener 3 + Zotero + BetterBibText - Rédaction d’articles longs</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="préparation-des-données.html"><a href="préparation-des-données.html"><i class="fa fa-check"></i><b>3</b> Préparation des données</a><ul>
+<li class="chapter" data-level="3" data-path="préparation-des-données.html"><a href="préparation-des-données.html"><i class="fa fa-check"></i><b>3</b> Préparation des données</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="préparation-des-données.html"><a href="préparation-des-données.html#bonnes-pratiques-dans-le-système-de-récolte-des-données-qualtrics"><i class="fa fa-check"></i><b>3.1</b> Bonnes pratiques dans le système de récolte des données (Qualtrics, …)</a></li>
-<li class="chapter" data-level="3.2" data-path="préparation-des-données.html"><a href="préparation-des-données.html#premières-étapes-dans-r-en-principe-les-noms-des-variables-sont-sains"><i class="fa fa-check"></i><b>3.2</b> Premières étapes dans R (en principe, les noms des variables sont sains)</a><ul>
+<li class="chapter" data-level="3.2" data-path="préparation-des-données.html"><a href="préparation-des-données.html#premières-étapes-dans-r-en-principe-les-noms-des-variables-sont-sains"><i class="fa fa-check"></i><b>3.2</b> Premières étapes dans R (en principe, les noms des variables sont sains)</a>
+<ul>
 <li class="chapter" data-level="3.2.1" data-path="préparation-des-données.html"><a href="préparation-des-données.html#ajout-de-la-variable-de-temps-dans-chaque-df-cas-simple"><i class="fa fa-check"></i><b>3.2.1</b> ajout de la variable de temps dans chaque df (cas simple)</a></li>
 <li class="chapter" data-level="3.2.2" data-path="préparation-des-données.html"><a href="préparation-des-données.html#catégorisation-de-la-variable-de-temps-cas-avec-horodatage-préalable"><i class="fa fa-check"></i><b>3.2.2</b> catégorisation de la variable de temps (cas avec horodatage préalable)</a></li>
 <li class="chapter" data-level="3.2.3" data-path="préparation-des-données.html"><a href="préparation-des-données.html#création-dun-data-frame-unique"><i class="fa fa-check"></i><b>3.2.3</b> création d’un data frame unique</a></li>
@@ -152,7 +153,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2.8" data-path="préparation-des-données.html"><a href="préparation-des-données.html#gestion-des-données-extrêmes"><i class="fa fa-check"></i><b>3.2.8</b> gestion des données extrêmes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="description-des-données.html"><a href="description-des-données.html"><i class="fa fa-check"></i><b>4</b> Description des données</a><ul>
+<li class="chapter" data-level="4" data-path="description-des-données.html"><a href="description-des-données.html"><i class="fa fa-check"></i><b>4</b> Description des données</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="description-des-données.html"><a href="description-des-données.html#obtenir-une-synthèse-de-données"><i class="fa fa-check"></i><b>4.1</b> Obtenir une synthèse de données</a></li>
 <li class="chapter" data-level="4.2" data-path="description-des-données.html"><a href="description-des-données.html#principes"><i class="fa fa-check"></i><b>4.2</b> Principes</a></li>
 <li class="chapter" data-level="4.3" data-path="description-des-données.html"><a href="description-des-données.html#procédures"><i class="fa fa-check"></i><b>4.3</b> Procédures</a></li>
@@ -160,7 +162,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.5" data-path="description-des-données.html"><a href="description-des-données.html#tableaux"><i class="fa fa-check"></i><b>4.5</b> Tableaux</a></li>
 <li class="chapter" data-level="4.6" data-path="description-des-données.html"><a href="description-des-données.html#plots"><i class="fa fa-check"></i><b>4.6</b> Plots</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="rapport.html"><a href="rapport.html"><i class="fa fa-check"></i><b>5</b> Rapport</a><ul>
+<li class="chapter" data-level="5" data-path="rapport.html"><a href="rapport.html"><i class="fa fa-check"></i><b>5</b> Rapport</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="rapport.html"><a href="rapport.html#principes-1"><i class="fa fa-check"></i><b>5.1</b> Principes</a></li>
 <li class="chapter" data-level="5.2" data-path="rapport.html"><a href="rapport.html#procédures-clés"><i class="fa fa-check"></i><b>5.2</b> Procédures clés</a></li>
 <li class="chapter" data-level="5.3" data-path="rapport.html"><a href="rapport.html#un-mot-sur-les-normes-apa"><i class="fa fa-check"></i><b>5.3</b> Un mot sur les normes APA</a></li>
@@ -183,7 +186,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="environnement-de-travail" class="section level1">
+<div id="environnement-de-travail" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Environnement de travail</h1>
 <p>Notre configuration de travail implique:</p>
 <ul>
@@ -191,7 +194,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><em>RStudio</em> dont le fonctionnement avec <code>bookdown</code> est particulièrement appréciable</li>
 <li><em>Sublime Text</em> qui doit être mieux connue mais permet de travailler sur des bouts de code avec une syntaxe couleurs et facilite ainsi le <em>copier/coller</em> d’anciens projets vers de nouveaux.</li>
 </ul>
-<div id="github-et-structure-des-dossiers" class="section level2">
+<div id="github-et-structure-des-dossiers" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> GitHub et structure des dossiers</h2>
 <!-- explication, avantages, inconvénients -->
 <p>On dispose d’un compte chez <em>GitHub</em>. Le compte est lié à 3 machines (2 macs et un pc). Le <em>commit</em> et le <em>push</em> se réalisent depuis RStudio directement. Sur chaque machine, on s’offre tout de même une solution <em>user friendly</em> avec <em>GitHub Desktop</em>.</p>
@@ -215,7 +218,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>L’intérêt est d’avoir à tout moment sur GitHub une vision claire des modifications réalisées à travers les différentes étapes de mise à jour des fichier (traçabilité de la démarche). De plus, une attention particulière est accordée à l’écriture d’un code avec une grammaire (le plus possible) conventionnelle qui est lisible et commenté, que ce soit dans le script ou dans le rapport en RMarkdown.</p>
 <p>Le script et le rapport se rédigent en parallèle.</p>
 </div>
-<div id="rédaction-du-code-et-grammaire" class="section level2">
+<div id="rédaction-du-code-et-grammaire" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Rédaction du code et grammaire</h2>
 <p>Le code suivant est, à notre sens, un exemple de bonne pratique car :</p>
 <ul>
@@ -224,39 +227,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>des espaces facilitent la lecture</li>
 <li>le code n’est pas <em>- à notre connaissance -</em> inutilement répétitif</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="environnement-de-travail.html#cb1-1"></a><span class="co">###############</span></span>
-<span id="cb1-2"><a href="environnement-de-travail.html#cb1-2"></a><span class="co">#visualisation#</span></span>
-<span id="cb1-3"><a href="environnement-de-travail.html#cb1-3"></a><span class="co">###############</span></span>
-<span id="cb1-4"><a href="environnement-de-travail.html#cb1-4"></a></span>
-<span id="cb1-5"><a href="environnement-de-travail.html#cb1-5"></a><span class="co">#score échelle HBSC</span></span>
-<span id="cb1-6"><a href="environnement-de-travail.html#cb1-6"></a></span>
-<span id="cb1-7"><a href="environnement-de-travail.html#cb1-7"></a>vis_hbs &lt;-<span class="st"> </span>d_long_paired <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb1-8"><a href="environnement-de-travail.html#cb1-8"></a><span class="st">  </span><span class="kw">ggplot</span>() <span class="op">+</span></span>
-<span id="cb1-9"><a href="environnement-de-travail.html#cb1-9"></a><span class="st">  </span><span class="kw">aes</span>(<span class="dt">x =</span> temps, <span class="dt">color =</span> group, <span class="dt">y =</span> hbs_sco) <span class="op">+</span></span>
-<span id="cb1-10"><a href="environnement-de-travail.html#cb1-10"></a><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">alpha =</span> <span class="fl">.5</span>) <span class="op">+</span></span>
-<span id="cb1-11"><a href="environnement-de-travail.html#cb1-11"></a><span class="st">  </span><span class="kw">geom_jitter</span>(<span class="dt">size =</span> <span class="dv">5</span>, <span class="dt">alpha =</span> <span class="fl">.5</span>, <span class="dt">position =</span> <span class="kw">position_jitterdodge</span>(<span class="dt">dodge.width=</span>.<span class="dv">7</span>, <span class="dt">jitter.width =</span> <span class="fl">.2</span>)) <span class="op">+</span></span>
-<span id="cb1-12"><a href="environnement-de-travail.html#cb1-12"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">fun =</span> mean, <span class="dt">geom =</span> <span class="st">&quot;point&quot;</span>, <span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">shape =</span> <span class="dv">4</span>) <span class="op">+</span></span>
-<span id="cb1-13"><a href="environnement-de-travail.html#cb1-13"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">fun =</span> mean, <span class="kw">aes</span>(<span class="dt">group =</span> group), <span class="dt">geom =</span> <span class="st">&quot;line&quot;</span>) <span class="op">+</span></span>
-<span id="cb1-14"><a href="environnement-de-travail.html#cb1-14"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;Mesure des CPS&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Score au HBSC&quot;</span>) <span class="op">+</span></span>
-<span id="cb1-15"><a href="environnement-de-travail.html#cb1-15"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">hjust =</span> <span class="fl">0.5</span>)) <span class="op">+</span></span>
-<span id="cb1-16"><a href="environnement-de-travail.html#cb1-16"></a><span class="st">  </span><span class="kw">scale_color_brewer</span>(<span class="st">&quot;Groupe&quot;</span>, <span class="dt">palette =</span> <span class="st">&quot;Set1&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="environnement-de-travail.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">###############</span></span>
+<span id="cb1-2"><a href="environnement-de-travail.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#visualisation#</span></span>
+<span id="cb1-3"><a href="environnement-de-travail.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="do">###############</span></span>
+<span id="cb1-4"><a href="environnement-de-travail.html#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="environnement-de-travail.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#score échelle HBSC</span></span>
+<span id="cb1-6"><a href="environnement-de-travail.html#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="environnement-de-travail.html#cb1-7" aria-hidden="true" tabindex="-1"></a>vis_hbs <span class="ot">&lt;-</span> d_long_paired <span class="sc">%&gt;%</span> </span>
+<span id="cb1-8"><a href="environnement-de-travail.html#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1-9"><a href="environnement-de-travail.html#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> temps, <span class="at">color =</span> group, <span class="at">y =</span> hbs_sco) <span class="sc">+</span></span>
+<span id="cb1-10"><a href="environnement-de-travail.html#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb1-11"><a href="environnement-de-travail.html#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">size =</span> <span class="dv">5</span>, <span class="at">alpha =</span> .<span class="dv">5</span>, <span class="at">position =</span> <span class="fu">position_jitterdodge</span>(<span class="at">dodge.width=</span>.<span class="dv">7</span>, <span class="at">jitter.width =</span> .<span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb1-12"><a href="environnement-de-travail.html#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">&quot;point&quot;</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">shape =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb1-13"><a href="environnement-de-travail.html#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="fu">aes</span>(<span class="at">group =</span> group), <span class="at">geom =</span> <span class="st">&quot;line&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1-14"><a href="environnement-de-travail.html#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Mesure des CPS&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Score au HBSC&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1-15"><a href="environnement-de-travail.html#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>)) <span class="sc">+</span></span>
+<span id="cb1-16"><a href="environnement-de-travail.html#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="st">&quot;Groupe&quot;</span>, <span class="at">palette =</span> <span class="st">&quot;Set1&quot;</span>)</span></code></pre></div>
 <p>Un autre exemple illustre cette grammaire. On rajoute quelques espaces pour faciliter la lecture et repérer les structures <em>- parfois nécessairement -</em> répétitives :</p>
 <blockquote>
 <p>On aimerait toutefois savoir comment éviter ces répétitions. Notamment quand on génère 10 graphiques qui ne varient, dans le code, qu’au niveau de l’axe Y et le titre, par exemple.</p>
 </blockquote>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="environnement-de-travail.html#cb2-1"></a><span class="co">#Création des moyennes de chaque questionnaire pour chaque observation</span></span>
-<span id="cb2-2"><a href="environnement-de-travail.html#cb2-2"></a></span>
-<span id="cb2-3"><a href="environnement-de-travail.html#cb2-3"></a>d_long &lt;-<span class="st"> </span>d_long <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb2-4"><a href="environnement-de-travail.html#cb2-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">hbs_sco =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;hbs&quot;</span>)),<span class="dt">na.rm =</span>T),</span>
-<span id="cb2-5"><a href="environnement-de-travail.html#cb2-5"></a>         <span class="dt">pec_sco =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;pec&quot;</span>)),<span class="dt">na.rm =</span>T),</span>
-<span id="cb2-6"><a href="environnement-de-travail.html#cb2-6"></a>         <span class="dt">be_sco  =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;be&quot;</span>)) ,<span class="dt">na.rm =</span>T),</span>
-<span id="cb2-7"><a href="environnement-de-travail.html#cb2-7"></a>         <span class="dt">est_sco =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;est&quot;</span>)),<span class="dt">na.rm =</span>T),</span>
-<span id="cb2-8"><a href="environnement-de-travail.html#cb2-8"></a>         <span class="dt">cli_sco =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;cli&quot;</span>)),<span class="dt">na.rm =</span>T),</span>
-<span id="cb2-9"><a href="environnement-de-travail.html#cb2-9"></a>         <span class="dt">sou_sco =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;sou&quot;</span>)),<span class="dt">na.rm =</span>T),</span>
-<span id="cb2-10"><a href="environnement-de-travail.html#cb2-10"></a>         <span class="dt">mot_sco =</span> <span class="kw">rowMeans</span>(<span class="kw">select</span>(.,<span class="kw">starts_with</span>(<span class="st">&quot;hbs&quot;</span>)),<span class="dt">na.rm =</span>T))</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="environnement-de-travail.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Création des moyennes de chaque questionnaire pour chaque observation</span></span>
+<span id="cb2-2"><a href="environnement-de-travail.html#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="environnement-de-travail.html#cb2-3" aria-hidden="true" tabindex="-1"></a>d_long <span class="ot">&lt;-</span> d_long <span class="sc">%&gt;%</span> </span>
+<span id="cb2-4"><a href="environnement-de-travail.html#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">hbs_sco =</span> <span class="fu">rowMeans</span>(<span class="fu">select</span>(.,<span class="fu">starts_with</span>(<span class="st">&quot;hbs&quot;</span>)),<span class="at">na.rm =</span>T),</span>
+<span id="cb2-5"><a href="environnement-de-travail.html#cb2-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">pec_sco =</span> <span class="fu">rowMeans</span>(<span class="fu">select</span>(.,<span class="fu">starts_with</span>(<span class="st">&quot;pec&quot;</span>)),<span class="at">na.rm =</span>T),</span>
+<span id="cb2-6"><a href="environnement-de-travail.html#cb2-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">be_sco  =</span> <span class="fu">rowMeans</span>(<span class="fu">select</span>(.,<span class="fu">starts_with</span>(<span class="st">&quot;be&quot;</span>)) ,<span class="at">na.rm =</span>T),</span>
+<span id="cb2-7"><a href="environnement-de-travail.html#cb2-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">est_sco =</span> <span class="fu">rowMeans</span>(<span class="fu">select</span>(.,<span class="fu">starts_with</span>(<span class="st">&quot;est&quot;</span>)),<span class="at">na.rm =</span>T),</span>
+<span id="cb2-8"><a href="environnement-de-travail.html#cb2-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">cli_sco =</span> <span class="fu">rowMeans</span>(<span class="fu">select</span>(.,<span class="fu">starts_with</span>(<span class="st">&quot;cli&quot;</span>)),<span class="at">na.rm =</span>T),</span>
+<span id="cb2-9"><a href="environnement-de-travail.html#cb2-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">sou_sco =</span> <span class="fu">rowMeans</span>(<span class="fu">select</span>(.,<span class="fu">starts_with</span>(<span class="st">&quot;sou&quot;</span>)),<span class="at">na.rm =</span>T),</span>
+<span id="cb2-10"><a href="environnement-de-travail.html#cb2-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">mot_sco =</span> <span class="fu">rowMeans</span>(<span class="fu">select</span>(.,<span class="fu">starts_with</span>(<span class="st">&quot;hbs&quot;</span>)),<span class="at">na.rm =</span>T))</span></code></pre></div>
 <p><strong>Une source pour la grammaire du codage peut être consultée à l’adresse :</strong> <a href="https://www.inwt-statistics.com/read-blog/inwts-guidelines-for-r-code.html" class="uri">https://www.inwt-statistics.com/read-blog/inwts-guidelines-for-r-code.html</a></p>
 </div>
-<div id="rstudio-et-packages" class="section level2">
+<div id="rstudio-et-packages" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> RStudio et packages</h2>
 <p>On dispose en l’état de la version 4.0.2 de R ainsi que de la version 1.3.959 de RStudio.</p>
 <p>Sur les macs, différents ajouts comme Xquartz ou des modules liés à LaTeX sont également installés.</p>
@@ -272,7 +275,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>En principe, pour des raisons d’élégance du code, on cherche à limiter la sur-installation de nouveaux packages. Il s’agit d’explorer ce que les packages installés ont à offrir avant de courir sur d’autres fonctions vues sur le web.</p>
 </div>
-<div id="sublime-text-et-packages" class="section level2">
+<div id="sublime-text-et-packages" class="section level2" number="2.4">
 <h2><span class="header-section-number">2.4</span> Sublime Text et Packages</h2>
 <p>L’utilisation de Sublime Tex est ergonomique. Les packages du logiciel permettent de travailler comme R Studio, avec toutefois un environnement plus aéré et propice à la rédaction avec des codes couleurs agréables. Il est complémentaire à RStudio mais peut carrément le remplacer pour certaines courtes étapes de rédaction.</p>
 <p>Les packages installés sont:</p>
@@ -284,7 +287,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>On doit encore clarifier comment lier sur PC et MAC GitHub. Mais ce n’est pas prioritaire. GitHub sur Sublime Text ? Emmet, git, sublime github. <a href="https://gist.github.com/KedrikG/f7b955dc371b1204ec76ce862e2dcd2e" class="uri">https://gist.github.com/KedrikG/f7b955dc371b1204ec76ce862e2dcd2e</a></p>
 </blockquote>
 </div>
-<div id="scrivener-3-zotero-betterbibtext---rédaction-darticles-longs" class="section level2">
+<div id="scrivener-3-zotero-betterbibtext---rédaction-darticles-longs" class="section level2" number="2.5">
 <h2><span class="header-section-number">2.5</span> Scrivener 3 + Zotero + BetterBibText - Rédaction d’articles longs</h2>
 <p>On doit déterminer comment travailler en <code>RMarkdown</code> pour des articles longs via <code>Scrivener 3</code>. Ce logiciel a l’avantage de facilement découper l’article en plusieurs zones de travail et <em>fusionner</em> le tout à l’export. De plus, on peut lier dynamiquement la rédaction à Zotero via un fichier <code>Bibtex</code> ce qui est très intéressant.</p>
 <p>On pense aussi à rassembler les éléments rédigés dans Scrivener et compiler le tout avec <code>Bookdown</code> sous R.</p>
@@ -292,7 +295,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Mais ce n’est pas optimal. Notre souhait est de pouvoir, p.ex., modifier une donnée dans la source des données (le fichier brut) et cliquer sur un (voire deux) boutons pour mettre à jour l’article final ! On n’y est pas encore !!</p>
 <p>L’organisation de la rédaction est un gros chantier qui n’est pas du tout structuré en l’état.</p>
 <p>La figure <a href="environnement-de-travail.html#fig:working-process">2.1</a> illustre notre potentiel workflow :</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="environnement-de-travail.html#cb3-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;images/writing-process.png&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="environnement-de-travail.html#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&#39;images/writing-process.png&#39;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:working-process"></span>
 <img src="images/writing-process.png" alt="Tentative de préparation d'un workflow en cas de rédaction d'article long" width="100%" />
 <p class="caption">

@@ -3,6 +3,7 @@
 ## Obtenir une synthèse de données
 
 Voici deux exemples pour obtenir des petits résumés.
+
 ```{r exemple10, echo=TRUE, eval=FALSE}
 d_long_paired_sum <- d_long_paired %>% 
    mutate(sex=ifelse(sex=="1", "garçons","filles")) %>% 
@@ -31,9 +32,11 @@ d_long_paired_sum2 <- d_long_paired %>%
 
 ## Le cas des boucles
 
-La fonction `for` semble très utile pour faire faire des boucles. Quand je dois réaliser 10 plots de 10 VI, je peux juste préparer mon plot et l'intégrer dans une boucle. La contrainte semble être liée à `aes` et peut-être aussi au titre du plot dont on aimerait aussi "automatiser" la génération.
+La fonction `for` semble très utile pour faire faire des boucles.
+Quand je dois réaliser 10 plots de 10 VI, je peux juste préparer mon plot et l'intégrer dans une boucle.
+La contrainte semble être liée à `aes` et peut-être aussi au titre du plot dont on aimerait aussi "automatiser" la génération.
 
-Infos à comprendre et tester ici : https://statistique-et-logiciel-r.com/comment-utiliser-ggplot-dans-une-boucle-ou-dans-une-fonction/
+Infos à comprendre et tester ici : <https://statistique-et-logiciel-r.com/comment-utiliser-ggplot-dans-une-boucle-ou-dans-une-fonction/>
 
 intégrer et expliquer le cas d'école réussi avec les données IBE:
 
@@ -75,22 +78,37 @@ for (i in 1:16) {
 
 intégrer mes trouvailles de crips2019 et ce qu'un plot doit montrer.
 
-
-Travail avec Zoe. Notes à intégrer : 
+Travail avec Zoe.
+Notes à intégrer :
 
 Réaliser des boxplots avec barres d'erreurs
 
-[ ] --> plutôt utiliser select des variables ou filter des participants
-gather --> 1er argument nom et 2ème argument valeur
+[ ] --\> plutôt utiliser select des variables ou filter des participants gather --\> 1er argument nom et 2ème argument valeur
 
-set.sid dans Rmarkdown pour figer les aléatoires, p.ex. le jitter pour pas que ça change à chaque lancement.
+set.sid dans Rmarkdown pour figer les aléatoires, p.ex.
+le jitter pour pas que ça change à chaque lancement.
 
 installer des kits de couleurs au besoin.
 
 shape : les numéros correspondent à des formes de points.
 
-geom_line : 3 arguments minimum. avec group.
---> pourquoi "group" et pourquoi "1".
-Alt + N = ~
+geom_line : 3 arguments minimum.
+avec group.
+--\> pourquoi "group" et pourquoi "1".
+Alt + N = \~
 
-jitter --> position et positionjitterdodge pour comparer G et F
+jitter --\> position et positionjitterdodge pour comparer G et F
+
+Afficher toutes les catégries, même les vides :
+
+```{r eval=FALSE}
+    scale_x_discrete(drop = FALSE) # Forcer l'affichage des catégories vides
+# A voir si la variable doit être un facteur
+d <- d %>% 
+  mutate(
+         q1 = factor(q1, levels = c("1","2","3","4"), labels = c("pas du tout", "plutôt non", "plutôt oui", "tout à fait")),
+         q2 = factor(q2, levels = c("1","2","3","4"), labels = c("pas du tout", "plutôt non", "plutôt oui", "tout à fait")),
+         q3 = factor(q3, levels = c("1","2","3","4"), labels = c("pas du tout", "plutôt non", "plutôt oui", "tout à fait")),
+         q4 = factor(q4, levels = c("1","2","3","4"), labels = c("pas du tout", "plutôt non", "plutôt oui", "tout à fait")),
+  )
+```
