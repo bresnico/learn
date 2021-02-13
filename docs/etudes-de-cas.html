@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5 Rapport | Notes personnelles: Principes stats, procédures et outils avec R</title>
-  <meta name="description" content="5 Rapport | Notes personnelles: Principes stats, procédures et outils avec R" />
+  <title>6 Etudes de cas | Notes personnelles: Principes stats, procédures et outils avec R</title>
+  <meta name="description" content="6 Etudes de cas | Notes personnelles: Principes stats, procédures et outils avec R" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5 Rapport | Notes personnelles: Principes stats, procédures et outils avec R" />
+  <meta property="og:title" content="6 Etudes de cas | Notes personnelles: Principes stats, procédures et outils avec R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 Rapport | Notes personnelles: Principes stats, procédures et outils avec R" />
+  <meta name="twitter:title" content="6 Etudes de cas | Notes personnelles: Principes stats, procédures et outils avec R" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="description-des-données.html"/>
-<link rel="next" href="etudes-de-cas.html"/>
+<link rel="prev" href="rapport.html"/>
+
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -190,25 +190,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="rapport" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> Rapport</h1>
-<div id="principes-1" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Principes</h2>
-<p>Avec ressources (fameux document PDF de CS durant le pre-doc)
-Ce qui est attendu dans un document de type rapport. (à l’aide du rapport de ZL et de celui en production pour LV)</p>
-<p>Kable et KableExtra</p>
-<p>bon affichage d’un tableau</p>
-<p>insérer image externe</p>
-</div>
-<div id="procédures-clés" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Procédures clés</h2>
-</div>
-<div id="un-mot-sur-les-normes-apa" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> Un mot sur les normes APA</h2>
-</div>
-<div id="un-mot-sur-bookdown-et-github" class="section level2" number="5.4">
-<h2><span class="header-section-number">5.4</span> Un mot sur Bookdown et GitHub</h2>
-<p>cf. chapitre 1.</p>
+<div id="etudes-de-cas" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Etudes de cas</h1>
+<div id="data-masking-walrus-opérator-et-sting-interpolation" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Data masking, Walrus opérator et sting interpolation</h2>
+<p>Exemple de Mutate dans une fonction ou même au sein d’un loop. voir sandbox.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="etudes-de-cas.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># avec tunnel. pas essayé encore.</span></span>
+<span id="cb15-2"><a href="etudes-de-cas.html#cb15-2" aria-hidden="true" tabindex="-1"></a>fun <span class="ot">&lt;-</span> <span class="cf">function</span>(df, var) {</span>
+<span id="cb15-3"><a href="etudes-de-cas.html#cb15-3" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
+<span id="cb15-4"><a href="etudes-de-cas.html#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="st">&quot;{var}&quot;</span> <span class="sc">:</span><span class="er">=</span> key <span class="sc">-</span> {{var}})</span>
+<span id="cb15-5"><a href="etudes-de-cas.html#cb15-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-6"><a href="etudes-de-cas.html#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co"># avec pull(). OK.</span></span>
+<span id="cb15-7"><a href="etudes-de-cas.html#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="etudes-de-cas.html#cb15-8" aria-hidden="true" tabindex="-1"></a>fun <span class="ot">&lt;-</span> <span class="cf">function</span>(df, var) {</span>
+<span id="cb15-9"><a href="etudes-de-cas.html#cb15-9" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
+<span id="cb15-10"><a href="etudes-de-cas.html#cb15-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="st">&quot;{var}&quot;</span> <span class="sc">:</span><span class="er">=</span> key <span class="sc">-</span> <span class="fu">pull</span>(.,var))</span>
+<span id="cb15-11"><a href="etudes-de-cas.html#cb15-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 
 </div>
 </div>
@@ -217,8 +214,8 @@ Ce qui est attendu dans un document de type rapport. (à l’aide du rapport de 
           </div>
         </div>
       </div>
-<a href="description-des-données.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="etudes-de-cas.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="rapport.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -257,7 +254,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/bresnico/learn/blob/master/04_rapport.Rmd",
+"link": "https://github.com/bresnico/learn/blob/master/05_etudes_de_cas.Rmd",
 "text": null
 },
 "download": null,

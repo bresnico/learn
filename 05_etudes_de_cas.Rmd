@@ -1,0 +1,22 @@
+# Etudes de cas
+
+## Data masking, Walrus opérator et sting interpolation
+
+Exemple de Mutate dans une fonction ou même au sein d'un loop. voir sandbox.
+
+```{r eval = FALSE}
+# avec tunnel. pas essayé encore.
+fun <- function(df, var) {
+  df <- df %>% 
+    mutate("{var}" := key - {{var}})
+}
+# avec pull(). OK.
+
+fun <- function(df, var) {
+  df <- df %>% 
+    mutate("{var}" := key - pull(.,var))
+}
+
+
+```
+

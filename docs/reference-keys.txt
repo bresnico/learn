@@ -29,3 +29,5 @@ principes-1
 procédures-clés
 un-mot-sur-les-normes-apa
 un-mot-sur-bookdown-et-github
+etudes-de-cas
+data-masking-walrus-opérator-et-sting-interpolation
