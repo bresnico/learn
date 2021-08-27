@@ -8,7 +8,9 @@ Notre configuration de travail implique:
 
 ## GitHub et structure des dossiers
 
-<!-- explication, avantages, inconvénients -->
+<!-- explication, avantages, inconvénients 
+
+reprendre le démarrage de projets depuis le site de Silvia -->
 
 On dispose d'un compte chez *GitHub*. Le compte est lié à 3 machines (2 macs et un pc). Le *commit* et le *push* se réalisent depuis RStudio directement. Sur chaque machine, on s'offre tout de même une solution *user friendly* avec *GitHub Desktop*.
 
